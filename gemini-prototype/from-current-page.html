@@ -1,0 +1,851 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>10-Day Reset Protocol 视频拉片报告</title>
+    <style>
+        /* Reset and General Styles */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        /* Layout */
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: #fff;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        /* Cards and Panels */
+        .panel {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .video-card {
+            display: flex;
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .video-card.is-active {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+        .video-thumb {
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .video-info {
+            flex-grow: 1;
+        }
+
+        .video-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .video-index {
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .video-summary {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .video-meta {
+            font-size: 0.75em;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .detail-workspace {
+            display: none;
+        }
+
+        .detail-workspace.is-active {
+            display: block;
+        }
+
+        /* Filters */
+        .filters {
+            margin-bottom: 10px;
+        }
+
+        .filter-chip {
+            background-color: #eee;
+            border: none;
+            padding: 5px 10px;
+            margin-right: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .filter-chip.is-active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .hero-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .metric-grid {
+            display: flex;
+            gap: 10px;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 1.5em;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn.alt {
+            background-color: #6c757d;
+        }
+
+        /* Workspace Details */
+        .workspace-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .workspace-badges .badge {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        .workspace-badges .badge.alt {
+            background-color: #6c757d;
+        }
+
+        .workspace-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .media-panel {
+            width: 40%;
+        }
+
+        .detail-panel {
+            width: 60%;
+        }
+
+        .video-shell {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .video-shell video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .media-meta {
+            font-size: 0.8em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .actions a {
+            margin-right: 10px;
+        }
+
+        /* Tabs */
+        .tab-bar {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .tab {
+            background-color: transparent;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab.is-active {
+            border-bottom-color: #007bff;
+            color: #007bff;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.is-active {
+            display: block;
+        }
+
+        /* Detail Cards */
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .detail-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .detail-card.detail-wide {
+            grid-column: 1 / -1;
+        }
+
+        /* Tables */
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        /* Spotlight */
+        .spotlight {
+            background-color: #ffffe0;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            margin-bottom: 15px;
+        }
+
+        .spotlight-label {
+            font-weight: bold;
+            color: #886c00;
+        }
+
+        /* Action Cards */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .action-card {
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .action-card.steal {
+            background-color: #e9ecef;
+        }
+
+        .action-card.avoid {
+            background-color: #f8d7da;
+        }
+
+        .action-card.recipe {
+            background-color: #d1e7dd;
+        }
+
+        .action-card.test {
+            background-color: #cfe2ff;
+        }
+
+        .action-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .app-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .hero-grid {
+                flex-direction: column;
+            }
+
+            .workspace-grid {
+                flex-direction: column;
+            }
+
+            .media-panel,
+            .detail-panel {
+                width: 100%;
+            }
+
+            .detail-card.detail-wide {
+                grid-column: 1 / 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <section class="panel">
+                <h2>跨视频共性</h2>
+                <ul>
+                    <li>真正能打的肠胃类素材，前 3 秒不是先讲成分，而是先让用户瞬间认出自己的症状或场景。</li>
+                    <li>好素材的中段不是信息越多越好，而是把产品机制讲到“刚好能信”，然后立刻补 proof 或 trust。</li>
+                    <li>产品出场必须足够早，否则再强的视觉钩子也容易变成“看热闹，不想下单”。</li>
+                    <li>动画、夸张隐喻、内部器官视角都可以用，但只能负责停滑，不能替代真实产品理解。</li>
+                    <li>对 EGUOO 最有参考价值的，不是最浮夸的表达，而是“症状命中 + 温和 reset 仪式 + 安全感收口”这条组合。
+                    </li>
+                </ul>
+            </section>
+            <section class="panel">
+                <h2>视频导航</h2>
+                <p>先在这里选“值得研究的样本”，再到右侧看为什么能打、怎么拍、怎么复刻。</p>
+                <div class="filters">
+                    <button class="filter-chip is-active" type="button" data-filter="all">全部</button>
+                    <button class="filter-chip" type="button" data-filter="高优先级">高优先级</button>
+                    <button class="filter-chip" type="button" data-filter="适合冷启动拉停滑">冷启动</button>
+                    <button class="filter-chip" type="button" data-filter="适合 warm traffic 降疑虑">降疑虑</button>
+                </div>
+                <div class="video-list">
+                    <button class="video-card is-active" type="button" data-target="sample-1447944140307678"
+                        data-priority="高优先级" data-hook="症状堆叠 + 视觉隐喻" data-fit="适合冷启动拉停滑">
+                        <div class="video-thumb"
+                            style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+                        <div class="video-info">
+                            <div class="video-top">
+                                <span class="video-index">01</span>
+                                <div>
+                                    <strong>Feel Goods</strong>
+                                    <small>症状堆叠 + 视觉隐喻</small>
+                                </div>
+                            </div>
+                            <p class="video-summary">动画肠道 + 症状堆叠型开头，停滑力强，但要很快切回真实产品。</p>
+                            <div class="video-meta">
+                                <span>高优先级</span>
+                                <span>适合冷启动拉停滑</span>
+                                <span>80s</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="video-card" type="button" data-target="sample-1278247630296232"
+                        data-priority="高优先级" data-hook="第一人称自白" data-fit="适合 UGC 转化测试">
+                        <div class="video-thumb"
+                            style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+                        <div class="video-info">
+                            <div class="video-top">
+                                <span class="video-index">02</span>
+                                <div>
+                                    <strong>Biocleanse</strong>
+                                    <small>第一人称自白</small>
+                                </div>
+                            </div>
+                            <p class="video-summary">第一人称自白式 UGC，靠“原来问题根源在这里”制造强好奇。</p>
+                            <div class="video-meta">
+                                <span>高优先级</span>
+                                <span>适合 UGC 转化测试</span>
+                                <span>29s</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="video-card" type="button" data-target="sample-1270236460773409"
+                        data-priority="中优先级" data-hook="动作先行" data-fit="适合低门槛演示">
+                        <div class="video-thumb"
+                            style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+                        <div class="video-info">
+                            <div class="video-top">
+                                <span class="video-index">03</span>
+                                <div>
+                                    <strong>R&#x27;s KOSO</strong>
+                                    <small>动作先行</small>
+                                </div>
+                            </div>
+                            <p class="video-summary">不是先卖点，而是先用“怎么喝”把产品门槛降下来。</p>
+                            <div class="video-meta">
+                                <span>中优先级</span>
+                                <span>适合低门槛演示</span>
+                                <span>15s</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="video-card" type="button" data-target="sample-1384237360020473"
+                        data-priority="高优先级" data-hook="症状精准命中" data-fit="适合 warm traffic 降疑虑">
+                        <div class="video-thumb"
+                            style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+                        <div class="video-info">
+                            <div class="video-top">
+                                <span class="video-index">04</span>
+                                <div>
+                                    <strong>Soothe Naturals</strong>
+                                    <small>症状精准命中</small>
+                                </div>
+                            </div>
+                            <p class="video-summary">靠高相关症状词开头，不炸裂，但足够精准。</p>
+                            <div class="video-meta">
+                                <span>高优先级</span>
+                                <span>适合 warm traffic 降疑虑</span>
+                                <span>52s</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="video-card" type="button" data-target="sample-763511795691279"
+                        data-priority="中优先级" data-hook="生活方式 ritual" data-fit="适合品牌感创意">
+                        <div class="video-thumb"
+                            style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+                        <div class="video-info">
+                            <div class="video-top">
+                                <span class="video-index">05</span>
+                                <div>
+                                    <strong>The Goddess Collection</strong>
+                                    <small>生活方式 ritual</small>
+                                </div>
+                            </div>
+                            <p class="video-summary">更像生活方式推荐，不像强卖货，适合柔和受众。</p>
+                            <div class="video-meta">
+                                <span>中优先级</span>
+                                <span>适合品牌感创意</span>
+                                <span>41s</span>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="video-card" type="button" data-target="sample-4477177849172584"
+                        data-priority="中优先级" data-hook="夸张隐喻动画" data-fit="适合测试首帧冲击">
+                        <div class="video-thumb"
+                            style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+                        <div class="video-info">
+                            <div class="video-top">
+                                <span class="video-index">06</span>
+                                <div>
+                                    <strong>Serene Herbs</strong>
+                                    <small>夸张隐喻动画</small>
+                                </div>
+                            </div>
+                            <p class="video-summary">动画隐喻确实抓眼，但真正难点是后面能不能讲清楚。</p>
+                            <div class="video-meta">
+                                <span>中优先级</span>
+                                <span>适合测试首帧冲击</span>
+                                <span>86s</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </section>
+        </aside>
+        <section class="main-content">
+            <section class="hero">
+                <h1>10-Day Reset Protocol 视频拉片报告</h1>
+                <p>总览与建议</p>
+                <div class="hero-grid">
+                    <section class="panel">
+                        <h2>执行摘要</h2>
+                        <div class="metric-grid">
+                            <div class="metric">
+                                <strong>6</strong>
+                                <span>精选样本</span>
+                            </div>
+                            <div class="metric">
+                                <strong>100%</strong>
+                                <span>均为 active 视频</span>
+                            </div>
+                            <div class="metric">
+                                <strong>2026-03-16</strong>
+                                <span>分析日期</span>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <a class="btn alt"
+                                href="/Users/zuoxiao/Documents/CodexProjects/use case/outputs/eguoo-reset/report.md"
+                                target="_blank" rel="noopener">打开报告</a>
+                            <a class="btn alt"
+                                href="/Users/zuoxiao/Documents/CodexProjects/use case/outputs/eguoo-reset/sample_index.csv"
+                                target="_blank" rel="noopener">打开 CSV</a>
+                        </div>
+                    </section>
+                    <section class="panel">
+                        <h2>建议优先动作</h2>
+                        <ul>
+                            <li><strong>Feel Goods</strong>：测试“夸张隐喻首帧”对比“真实生活场景首帧”，看哪种更能把停滑转成点击。</li>
+                            <li><strong>Biocleanse</strong>：测试“自白型开头”对比“清单型症状开头”，看哪种对冷流量更有效。</li>
+                            <li><strong>R&#x27;s KOSO</strong>：测试“动作先行”是否适合 EGUOO 冷启动，如果不够强，就和症状型开头组合。</li>
+                            <li><strong>Soothe Naturals</strong>：测试“更强情绪钩子 + trust 中段”是否优于“全程理性说明”。</li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
+            <section class="detail-workspace is-active" id="sample-1447944140307678">
+                <div class="workspace-head">
+                    <div>
+                        <h3>Feel Goods</h3>
+                        <p>动画肠道 + 症状堆叠型开头，停滑力强，但要很快切回真实产品。</p>
+                    </div>
+                    <div class="workspace-badges">
+                        <span class="badge">高优先级</span>
+                        <span class="badge alt">适合冷启动拉停滑</span>
+                    </div>
+                </div>
+                <div class="workspace-grid">
+                    <div class="media-panel">
+                        <div class="video-shell">
+                            <video controls preload="metadata" poster="[long-url-preserved-in-original-page]"
+                                src="[long-url-preserved-in-original-page]"></video>
+                        </div>
+                        <div class="media-meta">
+                            <span>时长 80s</span>
+                            <span>存活 23 天</span>
+                            <span>Hook 症状堆叠 + 视觉隐喻</span>
+                            <span>CTA Shop now</span>
+                        </div>
+                        <div class="actions">
+                            <a href="https://www.facebook.com/ads/library?id=1447944140307678" target="_blank"
+                                rel="noopener">广告库</a>
+                            <a href="[long-url-preserved-in-original-page]" target="_blank" rel="noopener">视频源</a>
+                            <a href="https://feelgoods.co/pages/gutguardian-clean-fiber-subscription-v3-4rw-designs"
+                                target="_blank" rel="noopener">落地页</a>
+                        </div>
+                    </div>
+                    <div class="detail-panel">
+                        <div class="tab-bar">
+                            <button class="tab is-active" type="button" data-tab="why">为什么它能打</button>
+                            <button class="tab" type="button" data-tab="how">具体怎么拍的</button>
+                            <button class="tab" type="button" data-tab="remake">我们怎么复刻</button>
+                        </div>
+                        <div class="tab-shell">
+                            <section class="tab-panel is-active" data-tab-panel="why">
+                                <div class="spotlight">
+                                    <span class="spotlight-label">这条为什么值得看</span>
+                                    <p>动画肠道 + 症状堆叠型开头，停滑力强，但要很快切回真实产品。</p>
+                                </div>
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Hook 判断</h4>
+                                        <p>这条在前 3 秒用高饱和的肠道动画和“消化不顺、排便不规律、腹胀”这类直白症状词来截停用户。它有效的原因，不只是画面夸张，而是夸张画面和高命中痛点同时出现。真正让这条成立的是：它没有沉迷在动画里，而是很快把用户带回“这是一个日常可用的解决方案”。</p>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>结构判断</h4>
+                                        <p>结构上属于很标准的直效广告：先用症状和动画拿注意力，再把产品包装成“好坚持的日常方案”，中段用成分对应利益点建立可信度，结尾再用优惠和保证把点击压力降下来。</p>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>说服机制</h4>
+                                        <ul class="mini-list">
+                                            <li>症状放大</li>
+                                            <li>动画式停滑</li>
+                                            <li>成分到利益点映射</li>
+                                            <li>Guarantee 风险逆转</li>
+                                            <li>折扣收口</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>Offer 结构</h4>
+                                        <p>这是单品直接卖货结构。前面用问题和机制把人留下，后面再补 savings 和 risk-free guarantee，让购买显得更轻松。</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="tab-panel" data-tab-panel="how">
+                                <div class="detail-card detail-wide">
+                                    <h4>时间轴拉片</h4>
+                                    <div class="table-wrap">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>时间</th>
+                                                    <th>功能段</th>
+                                                    <th>内容</th>
+                                                    <th>英文原文</th>
+                                                    <th>为什么重要</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>0:00-0:03</td>
+                                                    <td>钩子</td>
+                                                    <td>肠道动画 + 症状文案同时出现，强行截停。</td>
+                                                    <td>Digestion trouble? Irregular poops? Fupa?</td>
+                                                    <td>画面和文案一起做 stop，不给用户反应时间。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>0:03-0:10</td>
+                                                    <td>问题放大</td>
+                                                    <td>从单一腹胀扩到排便、沉重感等多个困扰。</td>
+                                                    <td>Here&#x27;s a natural fix.</td>
+                                                    <td>症状越成组，越容易扩大自我代入。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>0:10-0:22</td>
+                                                    <td>解决方案</td>
+                                                    <td>产品被包装成一个轻负担、可每天执行的方案。</td>
+                                                    <td>Gut Guardian uses organic plants...</td>
+                                                    <td>把 cleanse 从“狠药”变成“日常 reset”。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>0:22-0:45</td>
+                                                    <td>机制解释</td>
+                                                    <td>Fiber、Prebiotics、Probiotics、L-Glutamine 对应利益点。</td>
+                                                    <td>4g of Fiber &amp; Prebiotics / 4 billion Probiotics</td>
+                                                    <td>让用户觉得“不是玄学，是有结构的配方”。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>0:45-1:05</td>
+                                                    <td>证明与信任</td>
+                                                    <td>第三方测试、营养师配方、用户量级等信任信号进入。</td>
+                                                    <td>3,000,000+ sipped! 3rd party tested.</td>
+                                                    <td>中段不只是讲好处，还要补可信度。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1:05-1:20</td>
+                                                    <td>收口</td>
+                                                    <td>折扣和保证收尾。</td>
+                                                    <td>Save over 30% today! 100% money back guarantee!</td>
+                                                    <td>给用户一个现在行动的理由。</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>视觉工程</h4>
+                                        <p>画面工程的核心不是“做了 3D 动画”本身，而是它把动画当成首屏停滑器。后面靠大字字幕和节奏切换继续维持理解，属于“视觉负责抓眼，字幕负责转化”的典型结构。</p>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>留存假设</h4>
+                                        <p>前段停滑应该很强；最容易掉人的地方是中段，如果成分解释太像科普，用户会滑走。后段的优惠和 guarantee 反而有机会把意向拉回来。</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="tab-panel" data-tab-panel="remake">
+                                <div class="action-grid">
+                                    <div class="action-card steal">
+                                        <span class="action-label">值得借</span>
+                                        <p>借“症状堆叠 + 非常规首帧”的组合，而不是只借动画形式。</p>
+                                    </div>
+                                    <div class="action-card avoid">
+                                        <span class="action-label">不要照抄</span>
+                                        <p>不要把动画做成自嗨视觉，用户必须在几秒内知道产品和他有什么关系。</p>
+                                    </div>
+                                    <div class="action-card recipe">
+                                        <span class="action-label">我们怎么拍</span>
+                                        <p>如果给 EGUOO 拍，我们可以前 2 秒先打“腹胀、沉重、排空不顺”三连，再接真实产品、使用方式和 3 个体感利益点，最后补温和无刺激、美国制造、保证等安全信息。</p>
+                                    </div>
+                                    <div class="action-card test">
+                                        <span class="action-label">下一步测试</span>
+                                        <p>测试“夸张隐喻首帧”对比“真实生活场景首帧”，看哪种更能把停滑转成点击。</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail-workspace" id="sample-1278247630296232">
+                <div class="workspace-head">
+                    <div>
+                        <h3>Biocleanse</h3>
+                        <p>第一人称自白式 UGC，靠“原来问题根源在这里”制造强好奇。</p>
+                    </div>
+                    <div class="workspace-badges">
+                        <span class="badge">高优先级</span>
+                        <span class="badge alt">适合 UGC 转化测试</span>
+                    </div>
+                </div>
+                <div class="workspace-grid">
+                    <div class="media-panel">
+                        <div class="video-shell">
+                            <video controls preload="metadata" poster="[long-url-preserved-in-original-page]"
+                                src="[long-url-preserved-in-original-page]"></video>
+                        </div>
+                        <div class="media-meta">
+                            <span>时长 29s</span>
+                            <span>存活 180 天</span>
+                            <span>Hook 第一人称自白</span>
+                            <span>CTA Shop now</span>
+                        </div>
+                        <div class="actions">
+                            <a href="https://www.facebook.com/ads/library?id=1278247630296232" target="_blank"
+                                rel="noopener">广告库</a>
+                            <a href="[long-url-preserved-in-original-page]" target="_blank" rel="noopener">视频源</a>
+                            <a href="https://trybiocleanse.com/pages/cleansl8" target="_blank" rel="noopener">落地页</a>
+                        </div>
+                    </div>
+                    <div class="detail-panel">
+                        <div class="tab-bar">
+                            <button class="tab is-active" type="button" data-tab="why">为什么它能打</button>
+                            <button class="tab" type="button" data-tab="how">具体怎么拍的</button>
+                            <button class="tab" type="button" data-tab="remake">我们怎么复刻</button>
+                        </div>
+                        <div class="tab-shell">
+                            <section class="tab-panel is-active" data-tab-panel="why">
+                                <div class="spotlight">
+                                    <span class="spotlight-label">这条为什么值得看</span>
+                                    <p>第一人称自白式 UGC，靠“原来问题根源在这里”制造强好奇。</p>
+                                </div>
+                                <div class="detail-grid">
+                                    <div class="detail-card">
+                                        <h4>Hook 判断</h4>
+                                        <p>这条最强的是它不像广告，更像一个人突然告诉你“我以前也以为自己没问题”。这种第一人称自白一出现，再叠加瓶子已经在手里，用户会自然想听下去。它不是靠制作精良赢，而是靠“禁忌感 + 个人发现感”赢。</p>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>结构判断</h4>
+                                        <p>先自白，接着抛出隐藏原因，再马上展示怎么使用，最后用非常短的结果反馈把点击欲望推上去。它的优势在于极度压缩，没有给用户太多犹豫空间。</p>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>说服机制</h4>
+                                        <ul class="mini-list">
+                                            <li>第一人称自白</li>
+                                            <li>隐藏根因好奇心</li>
+                                            <li>产品上手演示</li>
+                                            <li>快速结果反馈</li>
+                                        </ul>
+                                    </div>
+                                    <div class="detail-card">
+                                        <h4>Offer 结构</h4>
+                                        <p>这条不是靠厚重 trust stack，而是靠 curiosity 驱动点击，属于轻信任、重好奇的卖法。</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="tab-panel" data-tab-panel="how">
+                                <div class="detail-card detail-wide">
+                                    <h4>时间轴拉片</h4>
+                                    <div class="table-wrap">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>时间</th>
+                                                    <th>功能段</th>
+                                                    <th>内容</th>
+                                                    <th>英文原文</th>
+                                                    <th>为什么重要</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>0:00-0:03</td>
+                                                    <td>钩子</td>
+                                                    <td>第一人称自白 + 产品上手，像秘密分享。</td>
+                                                    <td>I didn&#x27;t think I had parasites either.</td>
+                                                    <td>先让人停下来看“为什么她这么说”。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>0:03-0:08</td>
+                                                    <td>问题重构</td>
+                                                    <td>把 bloating、fatigue、brain fog 重新解释成隐藏问题。</td>
+                                                    <td>...constant bloating, fatigue, and brain fog...</td>
+                                                    <td>把熟悉的小痛点升级成值得处理的根因。</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>0:08-0:16</td>
+                                                    <td>产品演示</td>
+                                                    <td>dropper / bottle 的使用动作出现。</td>
+                                                    <td>Then I started CLEANSL8...</td>
+                                                    <td>让用户

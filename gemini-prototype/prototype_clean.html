@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta 视频广告拉片分析工具</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Summary Bar */
+        .summary-bar {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e1e6eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .summary-bar p {
+            margin: 0;
+        }
+
+        .summary-bar strong {
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 350px;
+            background-color: #fff;
+            border-right: 1px solid #e1e6eb;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 1px 0 3px rgba(0, 0, 0, 0.03);
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .filter-chips {
+            margin-bottom: 15px;
+        }
+
+        .filter-chip {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .filter-chip:hover {
+            background-color: #dee2e6;
+        }
+
+        .video-card {
+            border: 1px solid #e1e6eb;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 180px; /* Fixed height for consistent layout */
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-card-content {
+            padding: 15px;
+        }
+
+        .video-card-content h3 {
+            font-size: 16px;
+            margin: 0 0 5px;
+            color: #333;
+        }
+
+        .video-card-content p {
+            font-size: 13px;
+            color: #777;
+            margin: 0 0 3px;
+        }
+
+        .video-card-content .priority {
+            font-size: 12px;
+            color: #fff;
+            background-color: #28a745;
+            padding: 3px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* Right Content */
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e1e6eb;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #555;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s ease, border-bottom-color 0.2s ease;
+        }
+
+        .tab.active {
+            color: #007bff;
+            border-bottom-color: #007bff;
+        }
+
+        .tab:hover {
+            color: #007bff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Timeline Table */
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .timeline-table th,
+        .timeline-table td {
+            padding: 12px 15px;
+            border: 1px solid #e1e6eb;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .timeline-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .timeline-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e1e6eb;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Summary Bar -->
+    <div class="summary-bar">
+        <p>已分析视频：<strong>3</strong> | 待分析视频：<strong>12</strong> | 平均转化率：<strong>2.5%</strong></p>
+        <p>上次更新：<strong>2024-10-27 14:30</strong></p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <h2>视频列表</h2>
+            <div class="filter-chips">
+                <span class="filter-chip">全部</span>
+                <span class="filter-chip">电商</span>
+                <span class="filter-chip">游戏</span>
+                <span class="filter-chip">教育</span>
+            </div>
+
+            <div class="video-card" onclick="showDetails('video1')">
+                <img src="https://via.placeholder.com/350x200/007bff/FFFFFF?text=Video+1" alt="Video 1">
+                <div class="video-card-content">
+                    <h3>品牌 A</h3>
+                    <p>Hook 类型: 故事叙述</p>
+                    <p>一句话判断: 通过情感共鸣吸引用户。</p>
+                    <p>适用场景: 新品发布，品牌宣传</p>
+                    <span class="priority">高优先级</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="showDetails('video2')">
+                <img src="https://via.placeholder.com/350x200/28a745/FFFFFF?text=Video+2" alt="Video 2">
+                <div class="video-card-content">
+                    <h3>品牌 B</h3>
+                    <p>Hook 类型: 问题解决</p>
+                    <p>一句话判断: 直接指出痛点并提供解决方案。</p>
+                    <p>适用场景: 功能性产品，服务推广</p>
+                    <span class="priority">中优先级</span>
+                </div>
+            </div>
+
+            <div class="video-card" onclick="showDetails('video3')">
+                <img src="https://via.placeholder.com/350x200/dc3545/FFFFFF?text=Video+3" alt="Video 3">
+                <div class="video-card-content">
+                    <h3>品牌 C</h3>
+                    <p>Hook 类型: 悬念制造</p>
+                    <p>一句话判断: 引起用户好奇心，引导点击。</p>
+                    <p>适用场景: 活动预热，内容引流</p>
+                    <span class="priority">低优先级</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="content">
+            <h1 id="videoTitle">视频详情</h1>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('why')">为什么它能打</button>
+                <button class="tab" onclick="showTab('how')">具体怎么拍的</button>
+                <button class="tab" onclick="showTab('replicate')">我们怎么复刻</button>
+            </div>
+
+            <!-- Tab Content: Why -->
+            <div id="why" class="tab-content active">
+                <h2>核心优势分析</h2>
+                <p>该视频通过 [情感共鸣/痛点解决/悬念制造] 等方式，有效吸引了目标用户，提高了点击率和转化率。具体来说，[详细分析原因，例如：文案精准，画面吸引，节奏紧凑等]。</p>
+                <p><strong>关键指标：</strong> 点击率：[X%]，转化率：[Y%]，用户停留时间：[Z秒]</p>
+            </div>
+
+            <!-- Tab Content: How -->
+            <div id="how" class="tab-content">
+                <h2>拍摄手法拆解</h2>
+                <p>视频拍摄采用了 [场景化拍摄/动画演示/真人出镜] 等手法，并结合了 [快节奏剪辑/特效动画/字幕引导] 等技巧，提升了观看体验。</p>
+
+                <h3>时间轴分析</h3>
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>功能段</th>
+                            <th>中文分析</th>
+                            <th>英文原文</th>
+                            <th>为什么重要</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0:00-0:05</td>
+                            <td>Hook</td>
+                            <td>通过一个引人入胜的问题，快速抓住用户注意力。</td>
+                            <td>"Are you tired of...?"</td>
+                            <td>快速建立用户共鸣，引发兴趣。</td>
+                        </tr>
+                        <tr>
+                            <td>0:05-0:15</td>
+                            <td>问题阐述</td>
+                            <td>详细描述用户面临的痛点和问题。</td>
+                            <td>"Many people struggle with..."</td>
+                            <td>加深用户对问题的认知，建立信任。</td>
+                        </tr>
+                        <tr>
+                            <td>0:15-0:30</td>
+                            <td>解决方案</td>
+                            <td>介绍产品或服务如何解决上述问题。</td>
+                            <td>"Our product offers a simple solution..."</td>
+                            <td>展示产品价值，引导用户行动。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tab Content: Replicate -->
+            <div id="replicate" class="tab-content">
+                <h2>复刻策略建议</h2>
+                <p>基于该视频的成功经验，我们可以尝试以下复刻策略：</p>
+                <ul>
+                    <li><strong>Hook 优化：</strong> 针对目标用户，设计更具吸引力的 Hook 文案。</li>
+                    <li><strong>场景选择：</strong> 选择与产品或服务相关的真实场景进行拍摄。</li>
+                    <li><strong>节奏控制：</strong> 保持视频节奏紧凑，避免冗余内容。</li>
+                    <li><strong>数据追踪：</strong> 持续追踪视频效果，并根据数据进行优化。</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Deactivate all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Activate the selected tab and content
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+
+        function showDetails(videoId) {
+            // Update video title
+            let title = "";
+            if (videoId === 'video1') {
+                title = "品牌 A 视频详情";
+            } else if (videoId === 'video2') {
+                title = "品牌 B 视频详情";
+            } else {
+                title = "品牌 C 视频详情";
+            }
+            document.getElementById("videoTitle").innerText = title;
+
+            // Reset to default tab (Why)
+            showTab('why');
+        }
+
+        // Initialize the page with the first video selected
+        document.addEventListener('DOMContentLoaded', function() {
+            showDetails('video1');
+        });
+    </script>
+
+</body>
+</html>

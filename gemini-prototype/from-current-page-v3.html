@@ -1,0 +1,949 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-Day Reset Protocol 视频拉片报告</title>
+  <style>
+    /* Reset and General Styles */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+      background-color: #f4f4f7;
+      color: #333;
+    }
+
+    /* Layout */
+    .app-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 300px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-right: 1px solid #eee;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      color: #34495e;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+      color: #546e7a;
+    }
+
+    p {
+      margin-bottom: 1em;
+      color: #555;
+    }
+
+    /* Sidebar Styles */
+    .sidebar-title {
+      font-size: 1.3em;
+      margin-bottom: 1em;
+      color: #34495e;
+    }
+
+    .video-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .video-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .video-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .video-item.active {
+      background-color: #e0e0e0;
+    }
+
+    /* Video Card Styles */
+    .video-card {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      background-color: white;
+      text-align: left;
+      border: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .video-card:hover {
+      background-color: #f9f9f9;
+    }
+
+    .video-card.is-active {
+      background-color: #e9f7ef;
+      border: 1px solid #b2dfc2;
+    }
+
+    .video-thumb {
+      width: 80px;
+      height: 60px;
+      border-radius: 4px;
+      background-size: cover;
+      background-position: center;
+      margin-right: 10px;
+    }
+
+    .video-info {
+      flex: 1;
+    }
+
+    .video-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+
+    .video-index {
+      font-size: 0.8em;
+      color: #777;
+      margin-right: 5px;
+    }
+
+    .video-summary {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .video-meta {
+      font-size: 0.75em;
+      color: #888;
+      display: flex;
+      gap: 5px;
+    }
+
+    .video-meta span {
+      padding: 2px 4px;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+    }
+
+    /* Main Content Styles */
+    .video-detail {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .video-player {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    .analysis-section {
+      margin-bottom: 1em;
+    }
+
+    .analysis-title {
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+      color: #34495e;
+    }
+
+    .analysis-content {
+      color: #555;
+    }
+
+    /* Button Styles */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      text-decoration: none;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Utility Classes */
+    .mb-1 {
+      margin-bottom: 1em;
+    }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .filter-chip {
+      background-color: #eee;
+      border: none;
+      border-radius: 20px;
+      color: #555;
+      cursor: pointer;
+      font-size: 0.8em;
+      padding: 5px 10px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .filter-chip:hover {
+      background-color: #ddd;
+    }
+
+    .filter-chip.is-active {
+      background-color: #2980b9;
+      color: white;
+    }
+
+    /* Workspace */
+    .detail-workspace {
+      display: none;
+    }
+
+    .detail-workspace.is-active {
+      display: block;
+    }
+
+    .workspace-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .workspace-kicker {
+      font-size: 0.85em;
+      color: #777;
+      margin-bottom: 5px;
+    }
+
+    .workspace-head h3 {
+      margin-bottom: 0;
+    }
+
+    .workspace-head p {
+      margin-bottom: 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .workspace-badges {
+      display: flex;
+      gap: 5px;
+    }
+
+    .badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75em;
+      color: #fff;
+      background-color: #3498db;
+    }
+
+    .badge.alt {
+      background-color: #27ae60;
+    }
+
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+
+    .media-panel {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .video-shell {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .video-shell video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .media-meta {
+      font-size: 0.8em;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .actions a {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-right: 5px;
+      font-size: 0.85em;
+    }
+
+    .actions a:hover {
+      background-color: #2980b9;
+    }
+
+    .detail-panel {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+
+    /* Tabs */
+    .tab-bar {
+      display: flex;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .tab {
+      padding: 8px 16px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 0.9em;
+      color: #555;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .tab:hover {
+      color: #333;
+    }
+
+    .tab.is-active {
+      color: #2980b9;
+      border-color: #2980b9;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.is-active {
+      display: block;
+    }
+
+    /* Detail Grid */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+    }
+
+    .detail-card {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .detail-card h4 {
+      font-size: 1em;
+      margin-bottom: 5px;
+      color: #34495e;
+    }
+
+    .detail-wide {
+      grid-column: 1 / -1;
+    }
+
+    /* Table */
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    /* Action Grid */
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .action-card {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .action-label {
+      display: block;
+      font-size: 0.85em;
+      color: #777;
+      margin-bottom: 5px;
+    }
+
+    /* Spotlight */
+    .spotlight {
+      padding: 15px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .spotlight-label {
+      display: block;
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .app-container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .workspace-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-wide {
+        grid-column: 1 / 1;
+      }
+    }
+
+    /* New Styles */
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      color: white;
+      margin-bottom: 0.25rem;
+    }
+
+    .header p {
+      color: #ccc;
+      margin-bottom: 0;
+    }
+
+    .metric-grid {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1rem;
+    }
+
+    .metric {
+      text-align: center;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.5rem;
+    }
+
+    .metric span {
+      color: #777;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.25rem;
+      background-color: #007bff;
+      color: white;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .btn.alt {
+      background-color: #6c757d;
+    }
+
+    .btn.alt:hover {
+      background-color: #5a6268;
+    }
+
+    .hero-actions {
+      margin-top: 1rem;
+    }
+
+    .panel {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .panel ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+
+    .panel li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* New Styles */
+    .sample-details {
+      margin-top: 20px;
+    }
+
+    .sample-details h3 {
+      margin-bottom: 10px;
+    }
+
+    .sample-details p {
+      margin-bottom: 15px;
+    }
+
+    .sample-details ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .sample-details li {
+      margin-bottom: 5px;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>跨视频共性</h2>
+        <ul>
+          <li>真正能打的肠胃类素材，前 3 秒不是先讲成分，而是先让用户瞬间认出自己的症状或场景。</li>
+          <li>好素材的中段不是信息越多越好，而是把产品机制讲到“刚好能信”，然后立刻补 proof 或 trust。</li>
+          <li>产品出场必须足够早，否则再强的视觉钩子也容易变成“看热闹，不想下单”。</li>
+          <li>动画、夸张隐喻、内部器官视角都可以用，但只能负责停滑，不能替代真实产品理解。</li>
+          <li>对 EGUOO 最有参考价值的，不是最浮夸的表达，而是“症状命中 + 温和 reset 仪式 + 安全感收口”这条组合。</li>
+        </ul>
+      </section>
+
+      <section class="panel" style="margin-top:18px;">
+        <h2>视频导航</h2>
+        <p class="sub" style="margin-top:6px;">先在这里选“值得研究的样本”，再到右侧看为什么能打、怎么拍、怎么复刻。</p>
+        <div class="filters">
+          <button class="filter-chip is-active" type="button" data-filter="all">全部</button>
+          <button class="filter-chip" type="button" data-filter="高优先级">高优先级</button>
+          <button class="filter-chip" type="button" data-filter="适合冷启动拉停滑">冷启动</button>
+          <button class="filter-chip" type="button" data-filter="适合 warm traffic 降疑虑">降疑虑</button>
+        </div>
+        <div class="video-list">
+          <button class="video-card is-active" type="button" data-target="sample-1447944140307678"
+            data-priority="高优先级" data-hook="症状堆叠 + 视觉隐喻" data-fit="适合冷启动拉停滑">
+            <div class="video-thumb" style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+            <div class="video-info">
+              <div class="video-top">
+                <span class="video-index">01</span>
+                <div>
+                  <strong>Feel Goods</strong>
+                  <small>症状堆叠 + 视觉隐喻</small>
+                </div>
+              </div>
+              <p class="video-summary">动画肠道 + 症状堆叠型开头，停滑力强，但要很快切回真实产品。</p>
+              <div class="video-meta">
+                <span>高优先级</span>
+                <span>适合冷启动拉停滑</span>
+                <span>80s</span>
+              </div>
+            </div>
+          </button>
+          <button class="video-card" type="button" data-target="sample-1278247630296232" data-priority="高优先级"
+            data-hook="第一人称自白" data-fit="适合 UGC 转化测试">
+            <div class="video-thumb" style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+            <div class="video-info">
+              <div class="video-top">
+                <span class="video-index">02</span>
+                <div>
+                  <strong>Biocleanse</strong>
+                  <small>第一人称自白</small>
+                </div>
+              </div>
+              <p class="video-summary">第一人称自白式 UGC，靠“原来问题根源在这里”制造强好奇。</p>
+              <div class="video-meta">
+                <span>高优先级</span>
+                <span>适合 UGC 转化测试</span>
+                <span>29s</span>
+              </div>
+            </div>
+          </button>
+          <button class="video-card" type="button" data-target="sample-1270236460773409" data-priority="中优先级"
+            data-hook="动作先行" data-fit="适合低门槛演示">
+            <div class="video-thumb" style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+            <div class="video-info">
+              <div class="video-top">
+                <span class="video-index">03</span>
+                <div>
+                  <strong>R&#x27;s KOSO</strong>
+                  <small>动作先行</small>
+                </div>
+              </div>
+              <p class="video-summary">不是先卖点，而是先用“怎么喝”把产品门槛降下来。</p>
+              <div class="video-meta">
+                <span>中优先级</span>
+                <span>适合低门槛演示</span>
+                <span>15s</span>
+              </div>
+            </div>
+          </button>
+          <button class="video-card" type="button" data-target="sample-1384237360020473" data-priority="高优先级"
+            data-hook="症状精准命中" data-fit="适合 warm traffic 降疑虑">
+            <div class="video-thumb" style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+            <div class="video-info">
+              <div class="video-top">
+                <span class="video-index">04</span>
+                <div>
+                  <strong>Soothe Naturals</strong>
+                  <small>症状精准命中</small>
+                </div>
+              </div>
+              <p class="video-summary">靠高相关症状词开头，不炸裂，但足够精准。</p>
+              <div class="video-meta">
+                <span>高优先级</span>
+                <span>适合 warm traffic 降疑虑</span>
+                <span>52s</span>
+              </div>
+            </div>
+          </button>
+          <button class="video-card" type="button" data-target="sample-763511795691279" data-priority="中优先级"
+            data-hook="生活方式 ritual" data-fit="适合品牌感创意">
+            <div class="video-thumb" style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+            <div class="video-info">
+              <div class="video-top">
+                <span class="video-index">05</span>
+                <div>
+                  <strong>The Goddess Collection</strong>
+                  <small>生活方式 ritual</small>
+                </div>
+              </div>
+              <p class="video-summary">更像生活方式推荐，不像强卖货，适合柔和受众。</p>
+              <div class="video-meta">
+                <span>中优先级</span>
+                <span>适合品牌感创意</span>
+                <span>41s</span>
+              </div>
+            </div>
+          </button>
+          <button class="video-card" type="button" data-target="sample-4477177849172584" data-priority="中优先级"
+            data-hook="夸张隐喻动画" data-fit="适合测试首帧冲击">
+            <div class="video-thumb" style="background-image:url('[long-url-preserved-in-original-page]')"></div>
+            <div class="video-info">
+              <div class="video-top">
+                <span class="video-index">06</span>
+                <div>
+                  <strong>Serene Herbs</strong>
+                  <small>夸张隐喻动画</small>
+                </div>
+              </div>
+              <p class="video-summary">动画隐喻确实抓眼，但真正难点是后面能不能讲清楚。</p>
+              <div class="video-meta">
+                <span>中优先级</span>
+                <span>适合测试首帧冲击</span>
+                <span>86s</span>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+    </aside>
+
+    <section class="main-content">
+      <header class="header">
+        <h1>10-Day Reset Protocol 视频拉片报告</h1>
+        <p>EGUOO Wellness</p>
+        <div class="metric-grid">
+          <div class="metric">
+            <strong>6</strong>
+            <span>精选样本</span>
+          </div>
+          <div class="metric">
+            <strong>100%</strong>
+            <span>均为 active 视频</span>
+          </div>
+          <div class="metric">
+            <strong>2026-03-16</strong>
+            <span>分析日期</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn alt" href="/Users/zuoxiao/Documents/CodexProjects/use case/outputs/eguoo-reset/report.md"
+            target="_blank" rel="noopener">打开报告</a>
+          <a class="btn alt" href="/Users/zuoxiao/Documents/CodexProjects/use case/outputs/eguoo-reset/sample_index.csv"
+            target="_blank" rel="noopener">打开 CSV</a>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>建议优先动作</h2>
+        <ul>
+          <li><strong>Feel Goods</strong>：测试“夸张隐喻首帧”对比“真实生活场景首帧”，看哪种更能把停滑转成点击。</li>
+          <li><strong>Biocleanse</strong>：测试“自白型开头”对比“清单型症状开头”，看哪种对冷流量更有效。</li>
+          <li><strong>R&#x27;s KOSO</strong>：测试“动作先行”是否适合 EGUOO 冷启动，如果不够强，就和症状型开头组合。</li>
+          <li><strong>Soothe Naturals</strong>：测试“更强情绪钩子 + trust 中段”是否优于“全程理性说明”。</li>
+        </ul>
+      </section>
+
+      <section class="detail-workspace is-active" id="sample-1447944140307678">
+        <div class="workspace-head">
+          <div>
+            <div class="workspace-kicker">选中视频</div>
+            <h3>Feel Goods</h3>
+            <p>动画肠道 + 症状堆叠型开头，停滑力强，但要很快切回真实产品。</p>
+          </div>
+          <div class="workspace-badges">
+            <span class="badge">高优先级</span>
+            <span class="badge alt">适合冷启动拉停滑</span>
+          </div>
+        </div>
+        <div class="workspace-grid">
+          <div class="media-panel">
+            <div class="video-shell">
+              <video controls preload="metadata" poster="[long-url-preserved-in-original-page]"
+                src="[long-url-preserved-in-original-page]"></video>
+            </div>
+            <div class="media-meta">
+              <span>时长 80s</span>
+              <span>存活 23 天</span>
+              <span>Hook 症状堆叠 + 视觉隐喻</span>
+              <span>CTA Shop now</span>
+            </div>
+            <div class="actions">
+              <a href="https://www.facebook.com/ads/library?id=1447944140307678" target="_blank" rel="noopener">广告库</a>
+              <a href="[long-url-preserved-in-original-page]" target="_blank" rel="noopener">视频源</a>
+              <a href="https://feelgoods.co/pages/gutguardian-clean-fiber-subscription-v3-4rw-designs" target="_blank"
+                rel="noopener">落地页</a>
+            </div>
+          </div>
+          <div class="detail-panel">
+            <div class="tab-bar">
+              <button class="tab is-active" type="button" data-tab="why">为什么它能打</button>
+              <button class="tab" type="button" data-tab="how">具体怎么拍的</button>
+              <button class="tab" type="button" data-tab="remake">我们怎么复刻</button>
+            </div>
+            <div class="tab-shell">
+              <section class="tab-panel is-active" data-tab-panel="why">
+                <div class="spotlight">
+                  <span class="spotlight-label">这条为什么值得看</span>
+                  <p>动画肠道 + 症状堆叠型开头，停滑力强，但要很快切回真实产品。</p>
+                </div>
+                <div class="detail-grid">
+                  <div class="detail-card">
+                    <h4>Hook 判断</h4>
+                    <p>这条在前 3 秒用高饱和的肠道动画和“消化不顺、排便不规律、腹胀”这类直白症状词来截停用户。它有效的原因，不只是画面夸张，而是夸张画面和高命中痛点同时出现。真正让这条成立的是：它没有沉迷在动画里，而是很快把用户带回“这是一个日常可用的解决方案”。</p>
+                  </div>
+                  <div class="detail-card">
+                    <h4>结构判断</h4>
+                    <p>结构上属于很标准的直效广告：先用症状和动画拿注意力，再把产品包装成“好坚持的日常方案”，中段用成分对应利益点建立可信度，结尾再用优惠和保证把点击压力降下来。</p>
+                  </div>
+                  <div class="detail-card">
+                    <h4>说服机制</h4>
+                    <ul class="mini-list">
+                      <li>症状放大</li>
+                      <li>动画式停滑</li>
+                      <li>成分到利益点映射</li>
+                      <li>Guarantee 风险逆转</li>
+                      <li>折扣收口</li>
+                    </ul>
+                  </div>
+                  <div class="detail-card">
+                    <h4>Offer 结构</h4>
+                    <p>这是单品直接卖货结构。前面用问题和机制把人留下，后面再补 savings 和 risk-free guarantee，让购买显得更轻松。</p>
+                  </div>
+                </div>
+              </section>
+              <section class="tab-panel" data-tab-panel="how">
+                <div class="detail-card detail-wide">
+                  <h4>时间轴拉片</h4>
+                  <div class="table-wrap">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>时间</th>
+                          <th>功能段</th>
+                          <th>内容</th>
+                          <th>英文原文</th>
+                          <th>为什么重要</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0:00-0:03</td>
+                          <td>钩子</td>
+                          <td>肠道动画 + 症状文案同时出现，强行截停。</td>
+                          <td>Digestion trouble? Irregular poops? Fupa?</td>
+                          <td>画面和文案一起做 stop，不给用户反应时间。</td>
+                        </tr>
+                        <tr>
+                          <td>0:03-0:10</td>
+                          <td>问题放大</td>
+                          <td>从单一腹胀扩到排便、沉重感等多个困扰。</td>
+                          <td>Here&#x27;s a natural fix.</td>
+                          <td>症状越成组，越容易扩大自我代入。</td>
+                        </tr>
+                        <tr>
+                          <td>0:10-0:22</td>
+                          <td>解决方案</td>
+                          <td>产品被包装成一个轻负担、可每天执行的方案。</td>
+                          <td>Gut Guardian uses organic plants...</td>
+                          <td>把 cleanse 从“狠药”变成“日常 reset”。</td>
+                        </tr>
+                        <tr>
+                          <td>0:22-0:45</td>
+                          <td>机制解释</td>
+                          <td>Fiber、Prebiotics、Probiotics、L-Glutamine 对应利益点。</td>
+                          <td>4g of Fiber &amp; Prebiotics / 4 billion Probiotics</td>
+                          <td>让用户觉得“不是玄学，是有结构的配方”。</td>
+                        </tr>
+                        <tr>
+                          <td>0:45-1:05</td>
+                          <td>证明与信任</td>
+                          <td>第三方测试、营养师配方、用户量级等信任信号进入。</td>
+                          <td>3,000,000+ sipped! 3rd party tested.</td>
+                          <td>中段不只是讲好处，还要补可信度。</td>
+                        </tr>
+                        <tr>
+                          <td>1:05-1:20</td>
+                          <td>收口</td>
+                          <td>折扣和保证收尾。</td>
+                          <td>Save over 30% today! 100% money back guarantee!</td>
+                          <td>给用户一个现在行动的理由。</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="detail-grid">
+                  <div class="detail-card">
+                    <h4>视觉工程</h4>
+                    <p>画面工程的核心不是“做了 3D 动画”本身，而是它把动画当成首屏停滑器。后面靠大字字幕和节奏切换继续维持理解，属于“视觉负责抓眼，字幕负责转化”的典型结构。</p>
+                  </div>
+                  <div class="detail-card">
+                    <h4>留存假设</h4>
+                    <p>前段停滑应该很强；最容易掉人的地方是中段，如果成分解释太像科普，用户会滑走。后段的优惠和 guarantee 反而有机会把意向拉回来。</p>
+                  </div>
+                </div>
+              </section>
+              <section class="tab

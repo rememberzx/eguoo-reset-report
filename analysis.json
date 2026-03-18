@@ -1,0 +1,541 @@
+{
+  "title": "EGUOO 10-Day Reset Protocol 视频拉片报告",
+  "subtitle": "第一层看缩略总览与关键判断，第二层看详细拉片与英文原文摘录",
+  "as_of": "2026-03-16",
+  "report_url": "/Users/zuoxiao/Documents/CodexProjects/use case/outputs/eguoo-reset/report.md",
+  "csv_url": "/Users/zuoxiao/Documents/CodexProjects/use case/outputs/eguoo-reset/sample_index.csv",
+  "conclusions": [
+    "Winning gut creatives usually earn the stop by naming an uncomfortable symptom immediately, then convert that stop into belief with a low-friction product ritual.",
+    "The most reusable structure is not 'education first' but 'problem stack -> simple solution -> proof stack -> safety or offer'.",
+    "What separates stronger ads from noisy ones is not more claims, but better sequencing: the product appears early, the mechanism stays simple, and the close reduces buying anxiety.",
+    "Animated or visually surprising hooks can work, but only when they hand off quickly to real product handling, subtitles, and grounded proof.",
+    "For EGUOO, the best opportunity is to combine symptom-first direct response with a gentler reset ritual and explicit trust markers like cramp-free, made in USA, and guarantee."
+  ],
+  "samples": [
+    {
+      "brand": "Feel Goods",
+      "ad_id": "1447944140307678",
+      "start_date": "2026-02-21",
+      "survival_days": 23,
+      "duration_sec": 80,
+      "cta": "Shop now",
+      "hook_diagnosis": "The hook is not symptom-first at all. It opens with an anthropomorphized alternative-solution voiceover, starting with 'I'm probiotics...' and immediately telling the viewer that common gut helpers are useless if parasites are still inside the body. The stop comes from the anti-category attack, the unusual point of view, and the animated internal-body world that makes the whole argument feel like a cartoon exposé.",
+      "timeline": [
+        {
+          "time": "0:00-0:06",
+          "role_cn": "反常识钩子",
+          "beat_cn": "先让“益生菌”自己开口，说它在寄生虫还在体内时根本没用。",
+          "original_text": "I'm probiotics and I can't do anything when parasites are already inside your body feeding off your food.",
+          "why_it_matters_cn": "不是常规症状开场，而是先打掉用户熟悉的解决方案，制造强停滑。"
+        },
+        {
+          "time": "0:06-0:14",
+          "role_cn": "替代方案逐个打掉",
+          "beat_cn": "Juice detox 被拟人化，说自己只是在给寄生虫喂糖。",
+          "original_text": "I'm a juice detox and all I do is flood your body with sugar while the parasites inside you keep feeding.",
+          "why_it_matters_cn": "继续强化“你以为有用的东西其实没用”，把用户带进它设定的敌人框架。"
+        },
+        {
+          "time": "0:14-0:29",
+          "role_cn": "问题升级",
+          "beat_cn": "Insoluble fiber 和 greens powder 继续出场，被描述成只会加重堵塞、不能修复 gut lining。",
+          "original_text": "Hello, I'm insoluble fiber and all I do is pile more bulk on top of a gut that's already clogged and backed up. I'm a greens powder and I've got 75 ingredients on my label but none of them actually repair your gut lining or remove invaders.",
+          "why_it_matters_cn": "这段不是讲产品，而是在系统性拆掉竞品心智，让用户接受“旧方案都不行”。"
+        },
+        {
+          "time": "0:29-0:42",
+          "role_cn": "敌人框架完成 + 产品登场",
+          "beat_cn": "Laxatives 也被否掉后，Gut Guardian 作为唯一真正解决方案登场。",
+          "original_text": "And I'm laxatives and all I do is force everything out temporarily while the parasites and build up stay exactly where they are. I'm gut guardian and all of these won't do anything until you kill the parasites living inside your gut.",
+          "why_it_matters_cn": "前半段一直在否定替代方案，这一段才让主产品以“唯一有效方案”的身份出现。"
+        },
+        {
+          "time": "0:42-1:02",
+          "role_cn": "机制与解决路径",
+          "beat_cn": "讲 7 种 herbs and plants，杀寄生虫、分解 buildup、冲走 waste，并再次解释为什么 probiotic / fiber / juice / greens 都不够。",
+          "original_text": "I'm made of seven different herbs and plants that kill parasites, break down toxic build up and flush out pounds of waste that's been sitting in your colon for years. Probiotics can't colonize a dirty gut, fiber can't push through a blocked colon, juices and greens powders can't kill what's feeding off your food. But I can, because I clean the gut first, then flush the toxins out.",
+          "why_it_matters_cn": "这是整条广告的核心机制段，用“先清再补”的顺序给出完整论证。"
+        },
+        {
+          "time": "1:02-1:19",
+          "role_cn": "结果反馈与 CTA",
+          "beat_cn": "转到 taste、organic fruits、bloating 消失、energy 回来，最后一句 CTA 收尾。",
+          "original_text": "People not only love me for my taste, because I'm sweetened with real organic fruits. They also love me, because their bloating finally disappears. Their energy comes back and they stop wasting money on things that never worked. Try me and see how I can help.",
+          "why_it_matters_cn": "前面是强论证，最后才落到结果感受和行动邀请。"
+        }
+      ],
+      "functional_sequence": "This ad is an enemy-based persuasion sequence, not a standard symptom-solution ad. It opens by attacking familiar alternatives one by one, reframes the real problem as parasites plus toxic buildup, then introduces Gut Guardian as the only product that works in the correct order: kill first, flush second. Only after the mechanism is established does it move into taste, outcome, and call to action.",
+      "persuasion_mechanics": [
+        "Alternative-category attack",
+        "Enemy framing around parasites",
+        "Anthropomorphized product voices",
+        "Mechanism sequencing: kill first, flush second",
+        "Late payoff through bloating relief and energy gain"
+      ],
+      "visual_engineering": "The ad uses a cartoon gut-world with animated characters representing probiotics, juice detox, fiber, greens powder, laxatives, and finally Gut Guardian itself. The visual system is doing rhetorical work, not just decorative work: each character embodies an alternative solution and gets discredited on screen before the hero product appears. The refresh rhythm is fast enough to keep attention, but the continuity stays strong because the viewer remains inside one metaphor world.",
+      "offer_architecture": "This is not a discount-led ad. It is a thesis-led ad. The core sell is that other gut products fail because they operate in the wrong order, whereas Gut Guardian kills parasites first and flushes toxins second. The close is relatively soft: taste, organic fruit sweetness, bloating relief, energy return, then a light CTA.",
+      "retention_hypothesis": "The first 35 seconds likely hold well because each new animated character adds novelty while extending the same argument. The risk point is the mechanism block around 42-62 seconds, where the script gets denser. The final outcome section probably recovers weaker viewers by finally shifting from abstract enemy language to tangible benefits like less bloating and more energy.",
+      "what_to_steal": "Steal the structure of systematically disqualifying false solutions before introducing the hero product.",
+      "what_to_avoid": "Do not borrow the parasite claim or any medically risky root-cause framing if the brand cannot support it.",
+      "production_recipe": "Build a contrarian teardown ad for EGUOO where 3 common 'solutions' speak first and admit why they do not fully solve the problem. Then bring in EGUOO as the protocol that works in the right order. Keep the enemy mild and compliant, such as 'temporary relief', 'surface-level fix', or 'doesn't reset the system fully'. Close on concrete outcomes and a soft try-it CTA.",
+      "next_test": "Test a contrarian 'why other fixes fail' opener against a standard symptom-first opener while keeping the same CTA and landing page.",
+      "stage_label": "high-similarity-new-stage",
+      "ad_library_url": "https://www.facebook.com/ads/library?id=1447944140307678",
+      "video_url": "https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQPIx2HYMT6v-C6nwUFPpqfScVU_mjejO_dgbCGBDC9XY7_H3bHpIjvhN_dYBwlebvlkaWBcfSqpSh0035Qm-nlsGhk2yLUuG8OCCkSvflxZFQ.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=ausHv96GG8QQ7kNvwFvxxP-&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjMwOTUwNTI2NDQwMzY1NDMsImFzc2V0X2FnZV9kYXlzIjoyNCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgwLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=c68caae3b6d8a5d5&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC85RTQ4OTE3MUJERTY1RUFCRUVDOTJEMDA5RUI4RjE5MV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NBNDlERTM5RjBGNUIwNjBDOEExMTBBQkI4QURCNUE5X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb-vsWW47v_ChUCKAJDMywXQFQRBiTdLxsYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=4E-Coar3atWjqNtcMTuz6Q&_nc_ss=8&_nc_zt=28&oh=00_AfwOqqfKd5hiwmIvvHSXrKc7OcxJFO7KG_Ddb30rB3saYg&oe=69BDD3A8",
+      "landing_url": "https://feelgoods.co/pages/gutguardian-clean-fiber-subscription-v3-4rw-designs",
+      "poster_url": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.35426-6/639185561_712368351841681_7399070415245813262_n.jpg",
+      "hook_summary_cn": "这条不是症状型开头，而是先让“益生菌、果汁 detox、纤维、泻药”自己承认没用，用反常识论证停滑。",
+      "hook_diagnosis_cn": "真正的开头是“I'm probiotics...”这类拟人化台词，不是腹胀症状三连。它先把用户熟悉的替代方案逐个打掉，再把根因框成 parasites 和 toxic build-up，所以停滑来自“反常识 + 拟人化 + 动画世界观”，不是传统症状命中。",
+      "functional_sequence_cn": "这条脚本结构是：替代方案逐个认输 -> 根因被定义成 parasites / buildup -> Gut Guardian 作为唯一正确顺序的方案登场 -> 讲清 kill first / flush second 的机制 -> 最后才给 taste、bloating 消失、energy 回来和 CTA。它本质上是敌人框架广告，不是标准 symptom-solution 广告。",
+      "persuasion_mechanics_cn": [
+        "替代方案逐个否定",
+        "寄生虫敌人框架",
+        "拟人化角色口播",
+        "先杀再排的顺序论证",
+        "最后才落到 bloating / energy 结果"
+      ],
+      "visual_engineering_cn": "画面工程的核心不是“做了 3D 动画”本身，而是它把动画当成首屏停滑器。后面靠大字字幕和节奏切换继续维持理解，属于“视觉负责抓眼，字幕负责转化”的典型结构。",
+      "offer_architecture_cn": "这条不是靠折扣和 guarantee 在卖，而是靠一整套 thesis 在卖：别的 gut 产品顺序错了，Gut Guardian 才是先杀 parasites、再排 toxins 的正确方案。真正的 CTA 很轻，更多是在让用户接受这个世界观后再去尝试。",
+      "retention_hypothesis_cn": "前 35 秒的保留，来自每隔几秒就有一个新角色出来“认输”，所以会让人继续看下一个会是谁。最容易掉人的地方是 42-62 秒的机制说明，因为这段信息密度突然变高。最后的 bloating 消失和 energy 回来，是把抽象论证重新拉回体感收益的关键。",
+      "what_to_steal_cn": "借它“先拆错解法，再推主方案”的结构，而不是借寄生虫这个具体 claim。",
+      "what_to_avoid_cn": "不要直接照抄 parasites 这种高风险根因说法，也不要把动画世界做得太花而失去产品理解。",
+      "production_recipe_cn": "目标：给冷流量拍一条 35-45 秒的反常识拆解视频。\n脚本要求：\n- 0-6 秒：先让 2-3 个常见解法“自我打脸”，例如“只靠益生菌 / 清肠茶 / 临时排空，为什么总是反复”。\n- 6-15 秒：明确提出 EGUOO 的核心观点：不是表面缓解，而是 reset 顺序要对。\n- 15-28 秒：把 protocol 讲清楚，用“先做什么、再发生什么”的顺序表达，不要堆太多术语。\n- 28-38 秒：回到体感结果，只讲用户能感知到的变化，例如没那么胀、更轻、更顺。\n- 38 秒后：给 CTA，语气像“去看看这个 10 天 reset 怎么做”。\n分镜要求：\n- 镜头 1：前 6 秒至少 2 个不同“错误解法”镜头，节奏快一点。\n- 镜头 2：EGUOO pack shot 清楚出现，正式接管叙事。\n- 镜头 3：用字幕或动画简单表现“先 reset，再排出”的顺序。\n- 镜头 4：真实服用/准备动作，避免全片都在抽象表达里。\n- 镜头 5：结果点字幕卡 + CTA。\n交付要求：\n- 重点是反常识，不是医疗恐吓。\n- 不要碰 parasites 这类高风险词，改成“旧方法不彻底 / 只做表面功夫 / 顺序不对”。\n- 前 10 秒必须同时讲出：旧方案不行、EGUOO 是新思路、这是什么产品。",
+      "next_test_cn": "测试“为什么别的方法总反复”这种反常识开头，对比传统症状开头，看看哪种更能带来停滑和点击。",
+      "priority_cn": "高优先级",
+      "hook_type_cn": "反常识拆解 + 拟人隐喻",
+      "fit_cn": "适合冷启动强停滑",
+      "decision_summary_cn": "这条真正厉害的地方，不是动画本身，而是它先把常见 gut 解决方案逐个判死刑，再让 Gut Guardian 以“正确顺序方案”登场，所以它卖的是论证结构，不是普通症状文案。",
+      "transcript_source_note": "Aligned from local whisper-cli audio transcript on 2026-03-18."
+    },
+    {
+      "brand": "Biocleanse",
+      "ad_id": "1278247630296232",
+      "start_date": "2025-09-17",
+      "survival_days": 180,
+      "duration_sec": 29,
+      "cta": "Shop now",
+      "hook_diagnosis": "The hook is a first-person confession: 'I didn't know I had parasites either.' It works because it reframes common symptoms as a hidden root cause and introduces personal discovery in the same breath. The scroll stop comes less from polish and more from taboo curiosity plus a bottle already visible on screen.",
+      "timeline": [
+        {
+          "time": "0:00-0:03",
+          "role_cn": "钩子",
+          "beat_cn": "第一人称自白 + 产品上手，像秘密分享。",
+          "original_text": "I didn't think I had parasites either.",
+          "why_it_matters_cn": "先让人停下来看“为什么她这么说”。"
+        },
+        {
+          "time": "0:03-0:08",
+          "role_cn": "问题重构",
+          "beat_cn": "把 bloating、fatigue、brain fog 重新解释成隐藏问题。",
+          "original_text": "...constant bloating, fatigue, and brain fog...",
+          "why_it_matters_cn": "把熟悉的小痛点升级成值得处理的根因。"
+        },
+        {
+          "time": "0:08-0:16",
+          "role_cn": "产品演示",
+          "beat_cn": "dropper / bottle 的使用动作出现。",
+          "original_text": "Then I started CLEANSL8...",
+          "why_it_matters_cn": "让用户知道“这不是抽象承诺，是可以马上做的动作”。"
+        },
+        {
+          "time": "0:16-0:24",
+          "role_cn": "结果反馈",
+          "beat_cn": "用轻量结果词快速收口。",
+          "original_text": "I felt lighter, clearer...",
+          "why_it_matters_cn": "短视频里结果必须来得快。"
+        },
+        {
+          "time": "0:24-0:29",
+          "role_cn": "CTA",
+          "beat_cn": "趁好奇心还在时把人送去点击。",
+          "original_text": "Shop now",
+          "why_it_matters_cn": "不给用户太多反驳时间。"
+        }
+      ],
+      "functional_sequence": "This is a tight curiosity-driven direct response sequence. It does not spend time educating the viewer deeply; instead it uses confession to open a problem loop, shows the product ritual, implies a fast result, and exits before the viewer has time to object. Its strength is compression.",
+      "persuasion_mechanics": [
+        "Confession testimonial",
+        "Curiosity gap around hidden cause",
+        "Root-cause reframing",
+        "Low-friction use ritual",
+        "Transformation shorthand"
+      ],
+      "visual_engineering": "The visual system is pure UGC engineering: vertical close-up, product in hand, dropper motion, bathroom or kitchen surface, centered captions, and minimal wasted space. Refresh rhythm is fast but simple, relying on micro-actions rather than complicated edits. The ad feels believable because it looks homemade enough to signal authenticity while still keeping the product label readable.",
+      "offer_architecture": "The offer architecture is light. This is essentially a direct-to-product push that depends more on curiosity and symptom reframing than on heavy trust stacking. The CTA is hard, but the ad earns that by feeling like a secret the viewer should investigate immediately.",
+      "retention_hypothesis": "Hook is likely strong because taboo categories and self-diagnosis claims generate instant attention. Hold depends on keeping the product ritual visible; if the ad drifted into too much explanation it would lose energy. Completion is helped by the short runtime and unresolved curiosity.",
+      "what_to_steal": "Keep the product physically visible in the same frame as the opening claim.",
+      "what_to_avoid": "Avoid overclaiming root causes without backing; curiosity should not drift into unbelievable territory for the brand.",
+      "production_recipe": "Shoot a close-up UGC opener with EGUOO in hand, overlay a first-person line like 'I thought being bloated all week was normal', then show the serving ritual immediately. Follow with two fast outcome lines and close on a soft but direct purchase ask.",
+      "next_test": "Run a founder/customer confession angle against a polished symptom-list angle while keeping the exact same offer and landing page.",
+      "stage_label": "mid-similarity",
+      "ad_library_url": "https://www.facebook.com/ads/library?id=1278247630296232",
+      "video_url": "https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQNJmtnHyquwil2xuNgpYGJKyysVKIKLfFugLBbhBb3aVwwZyxbiNm4F-EFfDqt8y6BY4HNoe59jHNMZ3ldUfsw2JsZNEm0CW8kmfbAIMbTeRg.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=uxvhrJTqNTgQ7kNvwGBCRob&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjc3OTA1NzExNDk1MzY4MCwiYXNzZXRfYWdlX2RheXMiOjE4MCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI5LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=b8508355f6235bf4&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9FQTREMEQyNTUwODlFREY3QUEyMjE2QkM2RjI4OTZBQ19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzIxNEQ2Qzg0RkE1Nzk2N0VFNTdEQjhDQjhDQ0U1RTk1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACag38Xpi6PiAhUCKAJDMywXQD0Q5WBBiTcYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=i2frLdNGL2DPe-wRl4LHaA&_nc_ss=8&_nc_zt=28&oh=00_AfyzMjz-rovSZbHg9vPTa24CZxBcI_YT-A9zq9k7wZL8Jw&oe=69BDE56E",
+      "landing_url": "https://trybiocleanse.com/pages/cleansl8",
+      "poster_url": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.35426-6/548195835_1273301477419204_936632882835606636_n.jpg",
+      "hook_summary_cn": "第一人称自白式 UGC，靠“原来问题根源在这里”制造强好奇。",
+      "hook_diagnosis_cn": "这条最强的是它不像广告，更像一个人突然告诉你“我以前也以为自己没问题”。这种第一人称自白一出现，再叠加瓶子已经在手里，用户会自然想听下去。它不是靠制作精良赢，而是靠“禁忌感 + 个人发现感”赢。",
+      "functional_sequence_cn": "先自白，接着抛出隐藏原因，再马上展示怎么使用，最后用非常短的结果反馈把点击欲望推上去。它的优势在于极度压缩，没有给用户太多犹豫空间。",
+      "persuasion_mechanics_cn": [
+        "第一人称自白",
+        "隐藏根因好奇心",
+        "产品上手演示",
+        "快速结果反馈"
+      ],
+      "visual_engineering_cn": "典型 UGC：近景、手持、瓶身清楚、字幕直给。动作很小，但足够真实，用户会相信“这就是我也能做的一个动作”。",
+      "offer_architecture_cn": "这条不是靠厚重 trust stack，而是靠 curiosity 驱动点击，属于轻信任、重好奇的卖法。",
+      "retention_hypothesis_cn": "前 3 秒很容易抓住人，因为它像一个秘密开头。真正留人的是产品一直在画面里，用户不会迷失。",
+      "what_to_steal_cn": "开头就把产品放进手里，让“人 + 产品 + 说法”同时出现。",
+      "what_to_avoid_cn": "不要为了制造冲击感而说得过头，尤其是超出品牌可信范围的根因判断。",
+      "production_recipe_cn": "目标：给兼职视频做一条 25-35 秒的 UGC 自白转化视频。\n脚本要求：\n- 开头第一句直接说“我以前一直以为腹胀是正常的”，不要寒暄。\n- 开头同时把 EGUOO 拿在手里，不能只拍人脸。\n- 中段用 2 句解释：为什么开始做 10 天 reset、做完后最明显的体感变化是什么。\n- 结尾用一句低承诺 CTA，例如“如果你也总觉得饭后沉重，可以先去看看这个 protocol”。\n分镜要求：\n- 镜头 1：真人半身对镜，产品在手。\n- 镜头 2：服用或准备动作，最好在厨房/洗手台等真实场景。\n- 镜头 3：字幕打出 2-3 个症状词：腹胀、沉重、排空不顺。\n- 镜头 4：真人反馈镜头，表情要像真实分享，不要像主播硬背稿。\n- 镜头 5：产品近景 + CTA。\n交付要求：\n- 语气像朋友分享，不要像专家讲课。\n- 每句口播控制在 8 秒内，避免拖沓。\n- 不能夸大疗效，重点讲“我为什么试、我感受到什么”。",
+      "next_test_cn": "测试“自白型开头”对比“清单型症状开头”，看哪种对冷流量更有效。",
+      "priority_cn": "高优先级",
+      "hook_type_cn": "第一人称自白",
+      "fit_cn": "适合 UGC 转化测试",
+      "decision_summary_cn": "第一人称自白式 UGC，靠“原来问题根源在这里”制造强好奇。"
+    },
+    {
+      "brand": "R's KOSO",
+      "ad_id": "1270236460773409",
+      "start_date": "2024-10-30",
+      "survival_days": 502,
+      "duration_sec": 15,
+      "cta": "Learn more",
+      "hook_diagnosis": "The ad hooks by demonstrating the ritual before explaining the product. A tight pour shot into a measuring cup signals 'this is easy' and 'this is different' at the same time. The stop reason is mechanical clarity: the viewer understands the action instantly even before the copy resolves.",
+      "timeline": [
+        {
+          "time": "0:00-0:02",
+          "role_cn": "钩子",
+          "beat_cn": "液体倒入量杯，动作本身就是解释。",
+          "original_text": "Japanese style of juice cleanse",
+          "why_it_matters_cn": "一秒降低理解门槛。"
+        },
+        {
+          "time": "0:02-0:06",
+          "role_cn": "解决方案",
+          "beat_cn": "把 cleanse 讲成容易坚持的日常动作。",
+          "original_text": "super easy",
+          "why_it_matters_cn": "减少用户对 cleanse 麻烦、痛苦的想象。"
+        },
+        {
+          "time": "0:06-0:11",
+          "role_cn": "机制点到为止",
+          "beat_cn": "用 gut health / microbiome 语言补一点科学感。",
+          "original_text": "reset your digestive system",
+          "why_it_matters_cn": "给用户一个“它为什么有用”的简单解释。"
+        },
+        {
+          "time": "0:11-0:15",
+          "role_cn": "CTA",
+          "beat_cn": "以 learn more 的方式柔和收尾。",
+          "original_text": "Learn more",
+          "why_it_matters_cn": "适合兴趣层点击，不会太冒犯。"
+        }
+      ],
+      "functional_sequence": "This ad skips the traditional pain-first route and instead sells through low-friction ritual clarity. It moves from visual demonstration to simple promise to mechanism language to a soft CTA. The sequence is strong for a viewer who is not yet symptom-agitated but is open to a healthier routine.",
+      "persuasion_mechanics": [
+        "Demonstration-led opening",
+        "Ease and sustainability framing",
+        "Mechanism shorthand through gut health language",
+        "Soft educational CTA"
+      ],
+      "visual_engineering": "The engineering is minimal but disciplined: very tight framing, product liquid in motion, readable subtitles, and little visual clutter. Refresh rhythm is fast because each second contains motion rather than because of aggressive cuts. This is low-cost creative that feels premium because the action is visually satisfying.",
+      "offer_architecture": "This is more education-first than offer-first. Instead of strong discount or urgency, the ad relies on the promise of an easy cleanse format and a curiosity-based landing page click. That makes it lower pressure but also less forceful for hard conversion.",
+      "retention_hypothesis": "Hook should be solid because movement plus ritual clarity are easy to process. The risk is that without stronger pain language, some viewers may not feel enough urgency. Hold is supported by brevity more than by story depth.",
+      "what_to_steal": "Use action as the opener so the viewer sees how simple the reset is before hearing the pitch.",
+      "what_to_avoid": "Do not make the message so soft that the viewer leaves without understanding why they need the product now.",
+      "production_recipe": "Shoot an ultra-tight preparation shot of EGUOO being mixed or served in the first second, subtitle it as a 10-day system reset, then add one line on lighter digestion and cleaner energy. Keep the cut under 20 seconds and use a softer learn-more or shop-now bridge depending audience warmth.",
+      "next_test": "Test ritual-first against symptom-first to see whether EGUOO responds better to aspiration or problem agitation in top-of-funnel traffic.",
+      "stage_label": "low-similarity-mature",
+      "ad_library_url": "https://www.facebook.com/ads/library?id=1270236460773409",
+      "video_url": "https://video-bos5-1.xx.fbcdn.net/o1/v/t2/f2/m69/AQPYDEkDTdkSTpjH5Pm8hmOOE2PIAsbYQiEXI-Xxt7ef0-yuy55jO3XDe-JViaoVx9i1yPAgIU2XwuAPGdUuIgxq.mp4?strext=1&_nc_cat=111&_nc_sid=8bf8fe&_nc_ht=video-bos5-1.xx.fbcdn.net&_nc_ohc=E7_NHKQkpwkQ7kNvwH8YBjh&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmFzaWNfaHEyX2hkX3Byb2dyZXNzaXZlIiwieHB2X2Fzc2V0X2lkIjoyNTUwOTM4Mjk4Njk4NjY0LCJhc3NldF9hZ2VfZGF5cyI6MzcsInZpX3VzZWNhc2VfaWQiOjEwNjgwLCJkdXJhdGlvbl9zIjoxNSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&_nc_gid=ozOxVMDsQVCUeHPRlpNPBQ&_nc_ss=8&_nc_zt=28&oh=00_Afx2QtRyouACAhTPgl27aMQTUFuVnUXRF0KTzoQTzpADnw&oe=69BDE4AB",
+      "landing_url": "https://rskoso.com/?utm_source=facebook&utm_medium=ad&utm_campaign=prospecting-LAL1%25&utm_content=mei-lu-billo",
+      "poster_url": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.35426-6/463072324_1596356144648693_2167703795017952864_n.jpg",
+      "hook_summary_cn": "不是先卖点，而是先用“怎么喝”把产品门槛降下来。",
+      "hook_diagnosis_cn": "它一上来就让用户看到液体被倒进量杯里，属于“动作即解释”的开头。用户甚至还没看完字幕，就已经知道这个产品不复杂。它的钩子不是情绪冲击，而是低门槛感。",
+      "functional_sequence_cn": "先让人看懂使用动作，再讲这是一个简单可持续的肠道 reset，最后用比较软的 CTA 结束。更像轻教育，不像强逼单。",
+      "persuasion_mechanics_cn": [
+        "使用动作先行",
+        "低门槛感",
+        "可持续 ritual 感",
+        "软 CTA"
+      ],
+      "visual_engineering_cn": "极近景、液体流动、量杯刻度、简洁字幕，这些都在传达一个词：简单。它不是靠剪辑炫技，而是靠镜头本身就足够“可理解”。",
+      "offer_architecture_cn": "更偏 education-first，没有强折扣压迫，适合上层漏斗或更理性的 audience。",
+      "retention_hypothesis_cn": "动作本身能拉住人，但如果后面没有更强需求刺激，点击欲可能会弱于症状型创意。",
+      "what_to_steal_cn": "把使用动作拍成钩子，而不是把使用动作放到视频很后面。",
+      "what_to_avoid_cn": "不要太柔和，导致用户知道产品怎么用，却不知道自己为什么现在要买。",
+      "production_recipe_cn": "目标：做一条 15-25 秒的低门槛演示视频，让用户先看懂怎么用。\n脚本要求：\n- 0-2 秒：先上动作，不先讲品牌。\n- 2-6 秒：用一句字幕解释“10 天 reset，很容易开始”。\n- 6-15 秒：补 2-3 个结果点，例如减轻沉重感、帮助更轻松排空、饭后没那么鼓。\n- 最后一句 CTA 要偏 learn more，不要太硬卖。\n分镜要求：\n- 镜头 1：冲调/服用动作特写，手部动作清晰。\n- 镜头 2：包装和剂量镜头。\n- 镜头 3：字幕卡或贴片把结果点逐条打出来。\n- 镜头 4：一个完成动作后的轻松状态镜头。\n交付要求：\n- 节奏要快，镜头切换干净。\n- 重点是“看懂怎么用”，不要拍得太 lifestyle 化。\n- 15-25 秒内讲清楚，不要拖成长视频。",
+      "next_test_cn": "测试“动作先行”是否适合 EGUOO 冷启动，如果不够强，就和症状型开头组合。",
+      "priority_cn": "中优先级",
+      "hook_type_cn": "动作先行",
+      "fit_cn": "适合低门槛演示",
+      "decision_summary_cn": "不是先卖点，而是先用“怎么喝”把产品门槛降下来。"
+    },
+    {
+      "brand": "Soothe Naturals",
+      "ad_id": "1384237360020473",
+      "start_date": "2025-12-09",
+      "survival_days": 97,
+      "duration_sec": 52,
+      "cta": "Shop now",
+      "hook_diagnosis": "The ad hooks with plain-language symptom relief: heartburn, bloating, sour stomach. It is less flashy than other references, but its stop power likely comes from immediate specificity and a promise of natural relief. This is a trust-led opener, not a spectacle-led one.",
+      "timeline": [
+        {
+          "time": "0:00-0:04",
+          "role_cn": "钩子",
+          "beat_cn": "直接点名 heartburn、bloating 等症状。",
+          "original_text": "heartburn and bloating",
+          "why_it_matters_cn": "相关性强，高意向人群会立即停下。"
+        },
+        {
+          "time": "0:04-0:10",
+          "role_cn": "产品登场",
+          "beat_cn": "产品名称和核心 promise 出现。",
+          "original_text": "Introducing Stomach Soothe",
+          "why_it_matters_cn": "不让用户猜这是什么。"
+        },
+        {
+          "time": "0:10-0:24",
+          "role_cn": "利益点",
+          "beat_cn": "用 bullet 讲清防反酸、舒缓、修复等点。",
+          "original_text": "Prevent and relieve acid reflux & indigestion",
+          "why_it_matters_cn": "把“好像有效”变成“有几个明确作用点”。"
+        },
+        {
+          "time": "0:24-0:40",
+          "role_cn": "信任构建",
+          "beat_cn": "FAQ / shipping / guarantee 一类信息进入。",
+          "original_text": "Safe & Non-Addictive",
+          "why_it_matters_cn": "回答用户“安全吗、值不值得试”。"
+        },
+        {
+          "time": "0:40-0:52",
+          "role_cn": "CTA",
+          "beat_cn": "用较保守的方式完成收口。",
+          "original_text": "Shop now",
+          "why_it_matters_cn": "降低行动阻力。"
+        }
+      ],
+      "functional_sequence": "This is a classic symptom-to-trust conversion structure. It starts by qualifying a digestive issue, introduces the product fast, uses bullet clarity instead of narrative, then spends a meaningful portion of runtime reducing skepticism through safety, FAQ, or guarantee signals. It is less exciting than the top hooks, but stronger on objection handling.",
+      "persuasion_mechanics": [
+        "Symptom specificity",
+        "Mechanism explanation",
+        "Safety and natural framing",
+        "FAQ-style objection handling",
+        "Guarantee or shipping trust cues"
+      ],
+      "visual_engineering": "The preview indicates heavy use of page walkthrough, text overlays, and UI-based proof elements rather than personality-led footage. Refresh rhythm is slower, but the image meaning changes through information blocks rather than scene changes. This style is effective when the product category needs reassurance more than entertainment.",
+      "offer_architecture": "The offer is trust-weighted. Instead of leading with dramatic discounting, the ad appears to use natural-safe positioning, practical shipping information, and refund language to lower resistance. The CTA is still hard enough to sell, but the path is paved with credibility markers.",
+      "retention_hypothesis": "Hook may be moderate rather than explosive; it speaks directly to sufferers but may not interrupt as hard for casual viewers. Hold is probably stronger among qualified viewers because the ad answers objections. The highest drop risk is if the FAQ visuals look too much like a landing page too early.",
+      "what_to_steal": "Use a section of the ad to answer buyer objections visually instead of only narrating benefits.",
+      "what_to_avoid": "Avoid making the whole ad feel like a screen recording; trust visuals should support, not replace, living product proof.",
+      "production_recipe": "For EGUOO, open with a symptom headline, then introduce the 10-day reset, then insert one proof block that shows guarantee, gentle formula, made-in-USA production, or how-to-use instructions. Pair these with a real hand-held product shot so the ad does not become too static.",
+      "next_test": "Test a trust-heavy objection-handling middle section against a more emotional benefit-driven middle section while keeping the same opening symptom hook.",
+      "stage_label": "mid-similarity",
+      "ad_library_url": "https://www.facebook.com/ads/library?id=1384237360020473",
+      "video_url": "https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQPKZ5fZsTtKG09TNV6PeNRTirRVs1NPAzA312c3VDNfWj-UwBaPS4ruEQ02GabwiQnT4CuI3h_aGTc_T-Fq91loJ3lF8_iLg74BVz770-YmOg.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=LHsBktUWoUYQ7kNvwHxTdzm&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjU4OTY0Nzg1NDE1MDIwNCwiYXNzZXRfYWdlX2RheXMiOjI5MiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjUyLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=877083e91e5d99f7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8zMzQ4Q0NGRUM5QTgyMEQxOTc3NTI4OUJEMTVBMkNCNF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dBMG01eDBzLWRNWmNYWUNBSjhMV29oSktaQkFidjRHQUFBRhUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb4iJ3ugpKMAhUCKAJDMywXQEoZul41P30YGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=xz1R7c785PJCbXOL8de3sQ&_nc_ss=8&_nc_zt=28&oh=00_Afw0wV7JuQxaf0qj5JQUCDww0mNAa0_hNmHZh98I9mWqhw&oe=69BDD2AE",
+      "landing_url": "https://www.soothenaturals.co/products/stomach-soothe",
+      "poster_url": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.35426-6/597816959_2087388542009772_730378809491709112_n.jpg",
+      "hook_summary_cn": "靠高相关症状词开头，不炸裂，但足够精准。",
+      "hook_diagnosis_cn": "它不是靠夸张视觉，而是靠“heartburn、bloating、sour stomach”这种高相关词组直接筛人。能停下来的都是高意向用户，所以它更像一个“精准命中”，不是一个“全场停滑”。",
+      "functional_sequence_cn": "先命中症状，再引出产品，再用 benefit bullets 和 FAQ/guarantee 建 trust，最后收 CTA。结构很像“先让你点头，再帮你消除犹豫”。",
+      "persuasion_mechanics_cn": [
+        "症状命中",
+        "利益点条列",
+        "安全感 framing",
+        "FAQ 式疑虑处理",
+        "保证收口"
+      ],
+      "visual_engineering_cn": "信息密度比情绪密度高，页面式、FAQ 式、字幕式内容更多，适合承担“答疑”和“降疑虑”的职责。",
+      "offer_architecture_cn": "这是 trust-led 卖法，不是低价冲单。重点在于让用户觉得安全、靠谱、值得尝试。",
+      "retention_hypothesis_cn": "停滑未必最强，但对已经有胃胀、反酸等问题的人群会更容易看下去，因为它一直在回答“这东西对我有没有帮助”。",
+      "what_to_steal_cn": "在视频中段加入 FAQ / 保证 / 如何使用这种“降低犹豫”的模块。",
+      "what_to_avoid_cn": "不要整条都做成页面截图，否则会失去视频感。",
+      "production_recipe_cn": "目标：面向 warm traffic，做一条 35-50 秒的降疑虑视频。\n脚本要求：\n- 开头直接点名 1-2 个高相关症状，不需要太炸裂。\n- 中段重点不是卖情绪，而是回答问题：怎么用、会不会太刺激、适合谁、为什么值得试。\n- 结尾再补 guarantee 和 CTA，让用户做决定。\n分镜要求：\n- 镜头 1：症状字幕开场，配真实人物或真实产品。\n- 镜头 2：包装特写 + 使用方式字幕。\n- 镜头 3：FAQ 卡片，至少 3 条，例如“温和不刺激 / 美国制造 / 有保证”。\n- 镜头 4：收尾 CTA 卡。\n交付要求：\n- 这条重点是回答犹豫，不是制造大惊喜。\n- 画面可以简单，但信息一定要清楚。\n- 不要整条都用网页截图或纯 PPT 字幕，要保留视频感。",
+      "next_test_cn": "测试“更强情绪钩子 + trust 中段”是否优于“全程理性说明”。",
+      "priority_cn": "高优先级",
+      "hook_type_cn": "症状精准命中",
+      "fit_cn": "适合 warm traffic 降疑虑",
+      "decision_summary_cn": "靠高相关症状词开头，不炸裂，但足够精准。"
+    },
+    {
+      "brand": "The Goddess Collection",
+      "ad_id": "763511795691279",
+      "start_date": "2024-02-09",
+      "survival_days": 766,
+      "duration_sec": 41,
+      "cta": "Shop now",
+      "hook_diagnosis": "The hook is soft rather than aggressive: a founder or wellness-lifestyle frame paired with 'say goodbye to bloating'. It likely stops a different audience segment than the harder DR ads, namely viewers who respond to ritual, femininity, and trustful vibe rather than clinical or taboo language.",
+      "timeline": [
+        {
+          "time": "0:00-0:04",
+          "role_cn": "钩子",
+          "beat_cn": "真人和 wellness 空间一起出场。",
+          "original_text": "Say goodbye to bloating!",
+          "why_it_matters_cn": "先卖氛围，再卖产品。"
+        },
+        {
+          "time": "0:04-0:10",
+          "role_cn": "轻痛点承接",
+          "beat_cn": "用较软的方式承认 bloating 问题。",
+          "original_text": "Digestive Relief",
+          "why_it_matters_cn": "既命中问题，又不显得攻击性过强。"
+        },
+        {
+          "time": "0:10-0:22",
+          "role_cn": "ritual 建构",
+          "beat_cn": "把产品讲成日常舒缓支持。",
+          "original_text": "offers a soothing experience",
+          "why_it_matters_cn": "让产品更容易融入生活。"
+        },
+        {
+          "time": "0:22-0:33",
+          "role_cn": "自然配方与支持",
+          "beat_cn": "用 natural / day and night support 做理由。",
+          "original_text": "supported day and night",
+          "why_it_matters_cn": "从“好看”过渡到“为什么值得试”。"
+        },
+        {
+          "time": "0:33-0:41",
+          "role_cn": "收口",
+          "beat_cn": "以较自然的方式走向购买。",
+          "original_text": "Shop now",
+          "why_it_matters_cn": "不破坏整体温和感。"
+        }
+      ],
+      "functional_sequence": "This ad takes a gentler route from attention to action. Instead of maximizing urgency, it builds trust and desirability through environment, founder energy, and ritual framing, then uses digestive support as the bridge into purchase. It is less forceful than symptom-confession creative, but more brand-building.",
+      "persuasion_mechanics": [
+        "Lifestyle aspiration",
+        "Founder or human presence",
+        "Soft pain acknowledgement",
+        "Natural ingredients framing",
+        "Ritual desirability"
+      ],
+      "visual_engineering": "The ad appears to use boutique setting, visible product shelf context, a human guide, and subtitle-driven explanation. The refresh rhythm is moderate, with fewer hard cuts and more environmental credibility. Product understanding comes from context and ritual rather than from aggressive close-ups or fast overlays.",
+      "offer_architecture": "Offer pressure is lower here. The sale is embedded in a lifestyle invite rather than a heavy discount or fear-based push. This works better when the product can be positioned as part of a desirable identity or routine.",
+      "retention_hypothesis": "Hook may be weaker for viewers needing an immediate symptom slap, but stronger for viewers who distrust hard-sell gut ads. Hold likely depends on the charisma of the presenter and the warmth of the environment. Completion is helped when the ad remains visually soothing rather than repetitive.",
+      "what_to_steal": "Use a real-person ritual frame to make digestive support feel comforting instead of clinical.",
+      "what_to_avoid": "Do not let the creative become so soft that the viewer misses the urgency or concrete outcome.",
+      "production_recipe": "Shoot EGUOO in a calm bathroom or morning wellness setting with a founder or creator introducing it as a 10-day reset ritual. Keep one sentence on bloating relief, then move quickly into lighter-body and cleaner-energy framing. Support with product close-ups and one clear purchase bridge.",
+      "next_test": "Test a founder-led ritual ad versus a symptom-led direct response ad to see whether the brand can win with a softer emotional register.",
+      "stage_label": "low-similarity-mature",
+      "ad_library_url": "https://www.facebook.com/ads/library?id=763511795691279",
+      "video_url": "https://video-bos5-1.xx.fbcdn.net/v/t42.1790-2/419026181_1131125808326326_4298602791550451204_n.mp4?_nc_cat=102&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Bf1xAmV-mk4Q7kNvwE_N8UG&_nc_oc=AdkKEyR0XI9gHHlQ_4mBOZaU0jYtlC7dc3007fEZdd78WntxKpOSm6gjKxRn2W-X6WM&_nc_zt=28&_nc_ht=video-bos5-1.xx&_nc_gid=e5tKSy6Slma_5YLbixUusQ&_nc_ss=8&oh=00_AfxWoWAgzoeE4IEIjqNOLcvtwZuRJppqgYL1AoH8RBLUfA&oe=69BDCE12",
+      "landing_url": "https://thealkalinegoddess.com/products/digestive-relief",
+      "poster_url": "https://scontent-bos5-1.xx.fbcdn.net/v/t39.35426-6/426175688_887443603387916_5060747577840465252_n.jpg",
+      "hook_summary_cn": "更像生活方式推荐，不像强卖货，适合柔和受众。",
+      "hook_diagnosis_cn": "它的停滑方式不是刺激，而是温和。真人场景、疗愈氛围、柔和字幕，让用户先感受到“这像一个可以融入生活的 ritual”。所以它吸引的不是最焦虑的人，而是更愿意接受 wellness 叙事的人。",
+      "functional_sequence_cn": "先用人和场景建立信任，再轻描淡写地提 bloating，然后把产品塑造成日常舒缓 ritual，最后自然过渡到购买。",
+      "persuasion_mechanics_cn": [
+        "生活方式投射",
+        "真人可信度",
+        "柔和症状承接",
+        "自然配方与 ritual 感"
+      ],
+      "visual_engineering_cn": "空间、人物、货架、字幕一起构成“精品 wellness 品牌”的感觉。不是单镜头卖货，而是环境也在卖“我是谁”。",
+      "offer_architecture_cn": "更偏 brand-building，价格和 urgency 不是第一驱动，情绪舒适感更重要。",
+      "retention_hypothesis_cn": "对讨厌硬广的人群，这种片子可能更容易看下去；但对强症状、强转化人群，它的推动力可能不足。",
+      "what_to_steal_cn": "让肠道产品看起来也可以很舒缓、很体面，而不是只能卖痛苦。",
+      "what_to_avoid_cn": "不要为了高级感牺牲结果表达，用户还是要知道它具体能帮什么。",
+      "production_recipe_cn": "目标：做一条 30-45 秒的 ritual 风格视频，服务品牌感受众，但仍然要有结果表达。\n脚本要求：\n- 开头先给生活方式氛围，但 5 秒内必须说清这是一个 10 天 reset。\n- 口播要解释“我为什么做这个 reset”，不能只拍好看画面。\n- 中段要穿插具体结果，例如更轻、更顺、饭后没那么胀。\n- 最后一句把 ritual 和结果连起来，不要只停在情绪价值。\n分镜要求：\n- 镜头 1：早晨或睡前的真实场景，光线柔和。\n- 镜头 2：产品摆放和准备动作。\n- 镜头 3：真人口播解释做 reset 的原因。\n- 镜头 4：字幕卡打出具体症状结果。\n- 镜头 5：收尾 pack shot + CTA。\n交付要求：\n- 可以好看，但不能空。\n- 每 4-5 秒必须有一个新的信息点，不然会只剩氛围没有转化。",
+      "next_test_cn": "测试“创始人/博主 ritual 片”对比“硬症状直效片”，看品牌能否吃到更柔和的受众。",
+      "priority_cn": "中优先级",
+      "hook_type_cn": "生活方式 ritual",
+      "fit_cn": "适合品牌感创意",
+      "decision_summary_cn": "更像生活方式推荐，不像强卖货，适合柔和受众。"
+    },
+    {
+      "brand": "Serene Herbs",
+      "ad_id": "4477177849172584",
+      "start_date": "2026-02-05",
+      "survival_days": 39,
+      "duration_sec": 86,
+      "cta": "Shop now",
+      "hook_diagnosis": "The hook is a high-novelty animated gut world with a capsule-doctor character. The stop reason is pure visual interruption: this does not look like a normal supplement ad. The danger is that the animation can outrun the clarity of the sales message if product anchoring comes too late.",
+      "timeline": [
+        {
+          "time": "0:00-0:03",
+          "role_cn": "钩子",
+          "beat_cn": "动画肠道世界 + 拟人胶囊角色出场。",
+          "original_text": "Unlock Nature's Best",
+          "why_it_matters_cn": "非常强的 thumb-stop。"
+        },
+        {
+          "time": "0:03-0:10",
+          "role_cn": "问题 / 场景隐喻",
+          "beat_cn": "通过隐喻画面让用户理解这是 gut-support 类产品。",
+          "original_text": "support your gut health naturally",
+          "why_it_matters_cn": "必须尽快把创意画面和品类绑定。"
+        },
+        {
+          "time": "0:10-0:28",
+          "role_cn": "解决方案扩展",
+          "beat_cn": "把 promise 扩到 immunity、energy、gut health。",
+          "original_text": "Boost your immunity, rejuvenate your energy",
+          "why_it_matters_cn": "扩大受众面，但也可能稀释焦点。"
+        },
+        {
+          "time": "0:28-0:50",
+          "role_cn": "信任 / 保证",
+          "beat_cn": "用 feel the difference or it's FREE 一类话术补信任。",
+          "original_text": "Feel the difference or it's FREE",
+          "why_it_matters_cn": "视觉创意之后，需要实际购买理由。"
+        },
+        {
+          "time": "0:50-1:26",
+          "role_cn": "收口",
+          "beat_cn": "limited stock + shop now 完成推进。",
+          "original_text": "Limited stock available. Shop Now",
+          "why_it_matters_cn": "用传统 DR 动作收住。"
+        }
+      ],
+      "functional_sequence": "This ad is attention-heavy and clarity-light at the top. It first wins the stop through animated novelty, then tries to retrofit a broad supplement promise onto that visual world, and finally leans on offer and guarantee structure to close. It is strongest at attention, weaker at precise product understanding.",
+      "persuasion_mechanics": [
+        "Pattern interrupt through animation",
+        "Broad vitality promise",
+        "Guarantee framing",
+        "Urgency through limited stock"
+      ],
+      "visual_engineering": "The first frame is pure animated metaphor, not product reality. Refresh rhythm is high because the entire frame is in motion. Overlay density seems lighter than in text-heavy ads, which puts more strain on visuals to tell the story. This style is memorable, but can create a clarity gap if the product pack, ingredients, or routine are not integrated early.",
+      "offer_architecture": "The offer is more traditional than the visuals. It relies on satisfaction promise, money-back reassurance, and urgency, which helps compensate for the fact that the visual world itself is not a direct product demo. The CTA is hard and purchase-focused.",
+      "retention_hypothesis": "Hook should be strong due to novelty and motion. The biggest loss risk is after the first interruption, when viewers ask what the product actually is and why the animation matters. If the copy does not answer that quickly, hold could decay before the offer arrives.",
+      "what_to_steal": "Use one bold metaphorical opening frame that makes the viewer pause instantly.",
+      "what_to_avoid": "Avoid letting metaphor replace mechanism; novelty without clarity is expensive attention.",
+      "production_recipe": "For EGUOO, use at most 1 short surprising gut metaphor in the opener, then cut to a real pack shot, serving ritual, and 3 clear digestive outcomes. Keep the animation as a spark, not as the whole story.",
+      "next_test": "Test metaphor-led openings against real-life symptom-led openings, measuring whether the animated stop actually holds through the product introduction.",
+      "stage_label": "mid-similarity",
+      "ad_library_url": "https://www.facebook.com/ads/library?id=4477177849172584",
+      "video_url": "https://video-phl2-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQOnS2KueSGin25GojIKISFJHo65oR1JV_xHmRUdzSgfaRpOl7v2tzIq2SqpZMC-qZ0nlBz0qcTEn8r2fY74K4tRrDl2Agb2Oq7HwMWzaAZBZA.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=video-phl2-1.xx.fbcdn.net&_nc_ohc=eYwj_o9EAkIQ7kNvwG0x_my&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE5NjIxMTc0ODgwNjM1MjcsImFzc2V0X2FnZV9kYXlzIjo0OCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjg2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=7bb8ad5b687440b&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DRjQ2RkJBRTMzREQ3MEM5NjJBMzE0MDYwN0E3QjI5RF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0QzNDZFQTgyRDVEM0I0RDIxREQ1RUIzOTBCNDQ1RjlGX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbO0JG-oqL8BhUCKAJDMywXQFWCHKwIMScYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=L_WPy_J9IM7wsxSwqd8WjA&_nc_ss=8&_nc_zt=28&oh=00_Afw0MlgXHHkJV4fvNQa-qnQNkJdf1AwJXJ24C7qeDX2lFQ&oe=69BDE02B",
+      "landing_url": "https://sereneherbs.com/products/soursop-bitters-black-seed-bitters-bundle",
+      "poster_url": "https://scontent-phl2-1.xx.fbcdn.net/v/t39.35426-6/640292798_781570308329979_1116417555239527259_n.jpg",
+      "hook_summary_cn": "动画隐喻确实抓眼，但真正难点是后面能不能讲清楚。",
+      "hook_diagnosis_cn": "这条一上来就是肠道内部世界和药丸医生角色，停滑力很高，因为它和常规 supplement 广告完全不同。但问题也很明显：如果后面不快速切回产品和利益点，用户会只记得动画，不记得你卖什么。",
+      "functional_sequence_cn": "先靠高 novelty 拿注意力，再用较宽泛的 gut support / vitality 说法兜住，最后用 guarantee 和 urgency 强行关单。强在开头，弱在中段清晰度。",
+      "persuasion_mechanics_cn": [
+        "强视觉新奇感",
+        "夸张隐喻",
+        "广义健康承诺",
+        "Guarantee",
+        "紧迫感收口"
+      ],
+      "visual_engineering_cn": "全动效、强隐喻、轻产品，是这条的典型特征。很适合做 thumb-stop，但不一定适合承载完整转化信息。",
+      "offer_architecture_cn": "视觉很创意，offer 却很传统：limited stock、money-back、现在就买。说明它靠前面抓眼，后面还是得回到老派直效结构。",
+      "retention_hypothesis_cn": "前段停滑很强，但最容易掉人的地方就是“用户开始问：到底是什么产品？”如果回答太晚，留存会掉。",
+      "what_to_steal_cn": "借“首帧隐喻”的冲击力，但只借开头几秒。",
+      "what_to_avoid_cn": "不要让创意表达抢走产品理解。",
+      "production_recipe_cn": "目标：做一条测试首帧冲击力的 20-30 秒视频。\n脚本要求：\n- 前 2 秒允许用一个夸张隐喻或非日常画面停滑。\n- 第 3 秒必须切回真实产品，并明确一句这是什么、帮什么。\n- 中段只保留 2-3 个结果点，不要扩太多概念。\n- 结尾要补一个实际购买理由，例如 guarantee 或限时 offer。\n分镜要求：\n- 镜头 1：冲击型首帧，目的是停滑。\n- 镜头 2：pack shot，产品信息清楚。\n- 镜头 3：使用动作或产品近景。\n- 镜头 4：结果点字幕卡。\n- 镜头 5：guarantee / offer / CTA 收口。\n交付要求：\n- 冲击画面只能负责开头，不要把整条都拍成 metaphor。\n- 视频的主任务是卖清楚，不是炫创意。\n- 节奏必须非常紧，前 8 秒要把“痛点 + 产品 + 结果”都交代出来。",
+      "next_test_cn": "测试“隐喻首帧 + 真实产品中段”是否比“从头到尾真实场景”更能兼顾停滑与点击。",
+      "priority_cn": "中优先级",
+      "hook_type_cn": "夸张隐喻动画",
+      "fit_cn": "适合测试首帧冲击",
+      "decision_summary_cn": "动画隐喻确实抓眼，但真正难点是后面能不能讲清楚。"
+    }
+  ],
+  "conclusions_cn": [
+    "真正能打的肠胃类素材，前 3 秒不是先讲成分，而是先让用户瞬间认出自己的症状或场景。",
+    "好素材的中段不是信息越多越好，而是把产品机制讲到“刚好能信”，然后立刻补 proof 或 trust。",
+    "产品出场必须足够早，否则再强的视觉钩子也容易变成“看热闹，不想下单”。",
+    "动画、夸张隐喻、内部器官视角都可以用，但只能负责停滑，不能替代真实产品理解。",
+    "对 EGUOO 最有参考价值的，不是最浮夸的表达，而是“症状命中 + 温和 reset 仪式 + 安全感收口”这条组合。"
+  ]
+}
