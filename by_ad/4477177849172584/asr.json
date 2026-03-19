@@ -1,0 +1,318 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | Metal : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/zuoxiao/Documents/CodexProjects/use case/models/ggml-base.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:06,080"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 6080
+			},
+			"text": " Hi, I'm probiotics, and I can't do anything when parasites are already living inside you"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,080",
+				"to": "00:00:07,080"
+			},
+			"offsets": {
+				"from": 6080,
+				"to": 7080
+			},
+			"text": " eating your food."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:07,080",
+				"to": "00:00:12,960"
+			},
+			"offsets": {
+				"from": 7080,
+				"to": 12960
+			},
+			"text": " Hi, I'm a juice cleanse, and all I do is flood your body with sugar while the parasites"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,960",
+				"to": "00:00:14,640"
+			},
+			"offsets": {
+				"from": 12960,
+				"to": 14640
+			},
+			"text": " inside you keep feeding."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,640",
+				"to": "00:00:20,280"
+			},
+			"offsets": {
+				"from": 14640,
+				"to": 20280
+			},
+			"text": " Hi, I'm fiber supplements, and all I do is pile more bulk on top of a gut that's already"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:20,280",
+				"to": "00:00:21,880"
+			},
+			"offsets": {
+				"from": 20280,
+				"to": 21880
+			},
+			"text": " clogged and backed up."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:21,880",
+				"to": "00:00:28,040"
+			},
+			"offsets": {
+				"from": 21880,
+				"to": 28040
+			},
+			"text": " Hi, I'm detox tea, and all I do is make you pee more while the real problem stays stuck"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,040",
+				"to": "00:00:29,280"
+			},
+			"offsets": {
+				"from": 28040,
+				"to": 29280
+			},
+			"text": " inside your colon."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:29,280",
+				"to": "00:00:34,600"
+			},
+			"offsets": {
+				"from": 29280,
+				"to": 34600
+			},
+			"text": " Hi, I'm laxatives, and all I do is force everything out temporarily while the parasites"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:34,600",
+				"to": "00:00:37,040"
+			},
+			"offsets": {
+				"from": 34600,
+				"to": 37040
+			},
+			"text": " and build up stay exactly where they are."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:37,040",
+				"to": "00:00:42,360"
+			},
+			"offsets": {
+				"from": 37040,
+				"to": 42360
+			},
+			"text": " Hi, I'm Soursop Bitters, and all of these won't do anything until you flush out what's"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:42,360",
+				"to": "00:00:44,480"
+			},
+			"offsets": {
+				"from": 42360,
+				"to": 44480
+			},
+			"text": " actually living inside your gut."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:44,480",
+				"to": "00:00:49,600"
+			},
+			"offsets": {
+				"from": 44480,
+				"to": 49600
+			},
+			"text": " I have 15 African herbs that kill parasites, break down toxic buildup, and flush out pounds"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:49,600",
+				"to": "00:00:52,360"
+			},
+			"offsets": {
+				"from": 49600,
+				"to": 52360
+			},
+			"text": " of waste that's been sitting in your colon for years."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:52,360",
+				"to": "00:00:54,800"
+			},
+			"offsets": {
+				"from": 52360,
+				"to": 54800
+			},
+			"text": " Probiotics can't colonize a dirty gut."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:54,800",
+				"to": "00:00:56,960"
+			},
+			"offsets": {
+				"from": 54800,
+				"to": 56960
+			},
+			"text": " Fiber can't push through a blocked colon."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:56,960",
+				"to": "00:00:59,840"
+			},
+			"offsets": {
+				"from": 56960,
+				"to": 59840
+			},
+			"text": " Detox teas can't kill what's feeding off your food."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:59,840",
+				"to": "00:01:07,000"
+			},
+			"offsets": {
+				"from": 59840,
+				"to": 67000
+			},
+			"text": " But I can, because I clean the gut first, then flush the toxins out."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:07,000",
+				"to": "00:01:10,840"
+			},
+			"offsets": {
+				"from": 67000,
+				"to": 70840
+			},
+			"text": " People don't really like my bitter taste, but that's because real gut cleanses don't"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:10,840",
+				"to": "00:01:12,360"
+			},
+			"offsets": {
+				"from": 70840,
+				"to": 72360
+			},
+			"text": " come sweetened with fillers."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:12,360",
+				"to": "00:01:14,640"
+			},
+			"offsets": {
+				"from": 72360,
+				"to": 74640
+			},
+			"text": " They come raw in their purest form."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,640",
+				"to": "00:01:17,880"
+			},
+			"offsets": {
+				"from": 74640,
+				"to": 77880
+			},
+			"text": " They love me because their bloating finally disappears."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:17,880",
+				"to": "00:01:22,080"
+			},
+			"offsets": {
+				"from": 77880,
+				"to": 82080
+			},
+			"text": " Their energy comes back, and they stop wasting money on things that never worked."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:22,080",
+				"to": "00:01:24,080"
+			},
+			"offsets": {
+				"from": 82080,
+				"to": 84080
+			},
+			"text": " They just needed to flush first."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,080",
+				"to": "00:01:25,520"
+			},
+			"offsets": {
+				"from": 84080,
+				"to": 85520
+			},
+			"text": " (splashing)"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:25,520",
+				"to": "00:01:26,360"
+			},
+			"offsets": {
+				"from": 85520,
+				"to": 86360
+			},
+			"text": " Whew!"
+		}
+	]
+}

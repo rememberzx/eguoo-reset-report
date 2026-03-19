@@ -1,0 +1,87 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | Metal : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/zuoxiao/Documents/CodexProjects/use case/models/ggml-base.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:04,220"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 4220
+			},
+			"text": " This is ours Koso, and it's a three-day Japanese style of juice cleanse that's super easy."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,220",
+				"to": "00:00:05,220"
+			},
+			"offsets": {
+				"from": 4220,
+				"to": 5220
+			},
+			"text": " That's nice."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,220",
+				"to": "00:00:10,740"
+			},
+			"offsets": {
+				"from": 5220,
+				"to": 10740
+			},
+			"text": " After only a three-day cleanse, I've lost five pounds, a whole inch off of my waist,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:10,740",
+				"to": "00:00:13,160"
+			},
+			"offsets": {
+				"from": 10740,
+				"to": 13160
+			},
+			"text": " and literally my skin looks amazing."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:13,160",
+				"to": "00:00:14,640"
+			},
+			"offsets": {
+				"from": 13160,
+				"to": 14640
+			},
+			"text": " Subscribe to get 25% off."
+		}
+	]
+}

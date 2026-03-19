@@ -1,0 +1,175 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | Metal : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/zuoxiao/Documents/CodexProjects/use case/models/ggml-base.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:04,200"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 4200
+			},
+			"text": " Here's the secret drink to treat gird, gastritis and heartburn naturally."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,200",
+				"to": "00:00:08,540"
+			},
+			"offsets": {
+				"from": 4200,
+				"to": 8540
+			},
+			"text": " But don't just take it from us, thousands of customers have gotten off of PPI's and"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:08,540",
+				"to": "00:00:13,620"
+			},
+			"offsets": {
+				"from": 8540,
+				"to": 13620
+			},
+			"text": " resolved years of heartburn and acid reflux issues in just a few days with our blend."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:13,620",
+				"to": "00:00:17,860"
+			},
+			"offsets": {
+				"from": 13620,
+				"to": 17860
+			},
+			"text": " Within minutes the natural ingredients coat your esophagus offering instant relief while"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:17,860",
+				"to": "00:00:21,860"
+			},
+			"offsets": {
+				"from": 17860,
+				"to": 21860
+			},
+			"text": " preventing future reflux episodes by actively healing your gut."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:21,860",
+				"to": "00:00:26,900"
+			},
+			"offsets": {
+				"from": 21860,
+				"to": 26900
+			},
+			"text": " The best part is our blend is made with 100% fruits and roots, including slippery elmbark"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:26,900",
+				"to": "00:00:29,420"
+			},
+			"offsets": {
+				"from": 26900,
+				"to": 29420
+			},
+			"text": " and aero root which neutralize stomach acid."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:29,420",
+				"to": "00:00:34,820"
+			},
+			"offsets": {
+				"from": 29420,
+				"to": 34820
+			},
+			"text": " Elle glutamine repairs past damage and apple, papaya and green banana offer prebiotics that"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:34,820",
+				"to": "00:00:36,500"
+			},
+			"offsets": {
+				"from": 34820,
+				"to": 36500
+			},
+			"text": " replenish your gut lining."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:36,500",
+				"to": "00:00:39,940"
+			},
+			"offsets": {
+				"from": 36500,
+				"to": 39940
+			},
+			"text": " We formulated this because you should not need to cut out your favorite foods."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:39,940",
+				"to": "00:00:42,780"
+			},
+			"offsets": {
+				"from": 39940,
+				"to": 42780
+			},
+			"text": " Use PPIs or chew on thumbs to feel relief."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:42,780",
+				"to": "00:00:47,100"
+			},
+			"offsets": {
+				"from": 42780,
+				"to": 47100
+			},
+			"text": " Tap below and join the thousands who have gotten rid of heartburn and gird symptoms"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:47,100",
+				"to": "00:00:51,860"
+			},
+			"offsets": {
+				"from": 47100,
+				"to": 51860
+			},
+			"text": " with our blend, backed by a 45-day 100% money back guarantee."
+		}
+	]
+}

@@ -1,0 +1,109 @@
+{
+	"systeminfo": "WHISPER : COREML = 0 | OPENVINO = 0 | Metal : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | ACCELERATE = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/zuoxiao/Documents/CodexProjects/use case/models/ggml-base.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:05,200"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 5200
+			},
+			"text": " Hey, welcome to the guys collection. We feature a tea of the day when you come in and shout with us"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,200",
+				"to": "00:00:12,080"
+			},
+			"offsets": {
+				"from": 5200,
+				"to": 12080
+			},
+			"text": " And today the tea of the day is a digest and breathe and what that's good for is stagnant bow's constipation"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,080",
+				"to": "00:00:17,480"
+			},
+			"offsets": {
+				"from": 12080,
+				"to": 17480
+			},
+			"text": " Got a real hernias any type of colon cleanses that you may need"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:17,480",
+				"to": "00:00:23,400"
+			},
+			"offsets": {
+				"from": 17480,
+				"to": 23400
+			},
+			"text": " This isn't the full thing for a colon cleanse you want to add the blood for your fire, but this is digestive system"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:23,880",
+				"to": "00:00:31,520"
+			},
+			"offsets": {
+				"from": 23880,
+				"to": 31520
+			},
+			"text": " Really? Okay, that's the name. So when you come in, please feel free to either get your own cup and pour your china tea"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:31,520",
+				"to": "00:00:38,480"
+			},
+			"offsets": {
+				"from": 31520,
+				"to": 38480
+			},
+			"text": " Or ask the beautiful receptionist and we'll be happy to let you taste it. We hope that you enjoy. Thank you for us"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:38,480",
+				"to": "00:00:41,280"
+			},
+			"offsets": {
+				"from": 38480,
+				"to": 41280
+			},
+			"text": " Shop it with us"
+		}
+	]
+}
